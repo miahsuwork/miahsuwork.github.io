@@ -1,7 +1,7 @@
 body{font-family: "Roboto","Microsoft JhengHei";}
 a{opacity: 1;}
 a:hover{opacity: 0.9;text-decoration: none;}
-.navbar{position: fixed;width: 100%; transition: top 0.3s;}
+.navbar{position: fixed;width: 100%; transition: top 0.3s; z-index: 5;}
 .nav__itemNum{display: block; font-size: 0.85em; transition: ease-in-out .2s;}
 .nav__item{padding-right: 25px; position: relative;margin: 5px; transition: ease-in-out .2s;}
 .nav__item:last-child{margin-right: 40px;}
@@ -31,7 +31,8 @@ a:hover{opacity: 0.9;text-decoration: none;}
 
 .nav__tip{position: relative;}
 .nav__tip .tooltiptext {
-    width: 100%;
+    width: 120%;
+    padding: 10px;
     opacity: 0;
     font-size: .8em;
     border-radius: 3px;
@@ -134,3 +135,97 @@ a:hover{opacity: 0.9;text-decoration: none;}
 
 
 
+.container{position: relative;}
+.mainVisualIdentity{position: relative;}
+.mainVisualIdentity__textArea{position: relative;}
+.mainVisualIdentity_backgroundText{
+    position: absolute;
+    font-size: 350px;
+    font-weight: 800;
+    line-height: 1;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.mainVisualIdentity_smallText{
+    font-size: 1.1em;
+}
+.mainVisualIdentity_Name{
+    font-size: 100px;
+}
+.mainVisualIdentity_Name::after{
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    right: -20px;
+    bottom: -5px;
+}
+    
+.mainVisualIdentity_Features{
+    font-size: 100px;
+}
+.mainVisualIdentity_selfIntroduction{
+    font-size: 16px;
+}
+
+.jobTitle{
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+
+}
+.jobTitle p{
+    margin: 0;
+    font-size: 1.2em;
+}
+.jobTitle .jobTitle_secondLine{
+    padding-top: 150px;
+    position: relative;
+    
+}
+.redCircle:first-child{margin-top: 10px;}
+.redCircle{
+    width: 8px;
+    height: 8px;
+    display: inline-block;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.outlineCircle{
+    display: inline-block;
+    border-radius: 35%;
+    border: 1px solid #000;
+    position: absolute;
+}
+.outlineCircle-big{
+    width: 68px;
+    height: 68px;
+    border-width: 20px;
+}
+.outlineCircle-middle{
+    width: 46px;
+    height: 46px;
+    border-width: 14px;
+}
+.mainVisualIdentity .outlineCircle.outlineCircle-green{
+    bottom: 25%;
+    left: -10%;
+}
+.mainVisualIdentity__textArea .outlineCircle.outlineCircle-green{
+    right: 2%;
+    top: 20%;
+    left: initial;
+}
+.jobTitle .outlineCircle-middle{
+    width: 60px;
+    height: 60px;
+    border-width: 18px;
+    right: 50%;
+    top: 30%;
+}
+.outlineCircle-cyan.outlineCircle-middle{
+    position: fixed;
+    left: 60%;
+    bottom: 30%;
+}

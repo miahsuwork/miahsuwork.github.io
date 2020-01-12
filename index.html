@@ -44,7 +44,7 @@
                             <span class="nav__itemNum">03</span>
                             WORKS<span class="nav__hidden"><span class="nav__line"></span>
                         </a>
-                        <a href=""><span class="tooltiptext">All Works</span></a>
+                        <a href=""><span class="tooltiptext">View All Works</span></a>
                     </li>
                     <li class="nav-item nav__item">
                         <a class="nav-link nav__link" href="#">
@@ -65,28 +65,65 @@
                 <div class="col-3 layoutgrid__line"></div>
                 <div class="col-3 layoutgrid__line"></div>
                 <div class="col-3 layoutgrid__line"></div>
-                </div>
-        </div> 
+            </div>
+        </div>
     </div>
 
     <div class="emailSection"><a href="mailto:miahsuwork@gmail.com">miahsuwork@gmail.com</a></div>
     <div class="mediaSection">
         <ul class="nav flex-column">
             <li class="nav-item">
-              <a class="nav-link" href="https://www.cakeresume.com/s--LwU5PNF3o_Q8fHXszw1tCg--/miahsuwork" title="cakeresume" target="_blank"><i class="fab fa-cuttlefish fa-lg"></i></a>
+                <a class="nav-link" href="https://www.cakeresume.com/s--LwU5PNF3o_Q8fHXszw1tCg--/miahsuwork"
+                    title="cakeresume" target="_blank"><i class="fab fa-cuttlefish fa-lg"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://medium.com/@miahsuwork" title="medium" target="_blank"><i class="fab fa-medium fa-lg"></i></a>
+                <a class="nav-link" href="https://medium.com/@miahsuwork" title="medium" target="_blank"><i
+                        class="fab fa-medium fa-lg"></i></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="https://medium.com/@miahsuwork" title="github" target="_blank"><i class="fab fa-github fa-lg"></i></a>
+                <a class="nav-link" href="https://medium.com/@miahsuwork" title="github" target="_blank"><i
+                        class="fab fa-github fa-lg"></i></a>
             </li>
         </ul>
     </div>
 
     <main>
         <div class="container">
+            <div class="row mainVisualIdentity justify-content-between">
+                <div class="mainVisualIdentity_backgroundText">
+                    DES<br>
+                    ING
+                </div>
+                <sections class="col-6 d-flex align-items-center mainVisualIdentity__textArea">
+                    <div class="outlineCircle outlineCircle-green outlineCircle-middle"></div>
+                    <div class="">
+                        <small class="mainVisualIdentity_smallText">Hi, my name is</small>
+                        <h2 class="mainVisualIdentity_Name">Mia Hsu</h2>
+                        <h3 class="mainVisualIdentity_Features">I Love web </h3>
+                        <p class="mainVisualIdentity_selfIntroduction">我是一名網頁設計師，現居台北<br>
+                            個性開朗，樂於創新挑戰，嘗試不同的可能性</p>
+                        </div>
+                </sections>
+                <div class="col-3 jobTitle align-items-center">
+                    <p class="text-center">Front-End Developer</p>
+                    <p class="text-center jobTitle_secondLine">and Web Designer 
+                        <span class="redCircleGroup">
+                            <span class="redCircle"></span>
+                            <span class="redCircle"></span>
+                        </span>
+                    </p>
+                    <div class="outlineCircle outlineCircle-green outlineCircle-middle"></div>
+                </div>
+                <div class="outlineCircle outlineCircle-green outlineCircle-big"></div>
+                <div class="outlineCircle outlineCircle-cyan outlineCircle-middle"></div>
+            </div>
 
+
+            <div class="row">
+                <div class="col-6">
+                    
+                </div>
+            </div>
         </div>
     </main>
 
@@ -100,14 +137,19 @@
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/fontawesome-5.12.0l.min.js"></script>
     <script>
+        /*
+        | menu active click add active
+        */
         $('nav li').click(function () {
             $('nav li').removeClass('active');
             $(this).addClass('active');
         })
 
-        /* When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar */
-            var prevScrollpos = window.pageYOffset;
-            window.onscroll = function() {
+        /*
+        | When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar 
+        */
+        var prevScrollpos = window.pageYOffset;
+        window.onscroll = function () {
             var currentScrollPos = window.pageYOffset;
             if (prevScrollpos > currentScrollPos) {
                 document.getElementById("navbar").style.top = "0";
@@ -115,6 +157,16 @@
                 document.getElementById("navbar").style.top = "-80px";
             }
             prevScrollpos = currentScrollPos;
+        }
+
+        /*
+        | mainVisualIdentity vlign
+        */
+        $(window).resize(resizeHandler);
+        $(window).triggerHandler("resize");
+        function resizeHandler(){
+            var winH = $(window).height();
+            $(".mainVisualIdentity").css("height", winH);
         }
 
 

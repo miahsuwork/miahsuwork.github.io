@@ -1,4 +1,6 @@
 body{font-family: "Roboto","Microsoft JhengHei";}
+a{opacity: 1;}
+a:hover{opacity: 0.9;text-decoration: none;}
 .navbar{position: fixed;width: 100%; transition: top 0.3s;}
 .nav__itemNum{display: block; font-size: 0.85em; transition: ease-in-out .2s;}
 .nav__item{padding-right: 25px; position: relative;margin: 5px; transition: ease-in-out .2s;}
@@ -87,7 +89,6 @@ body{font-family: "Roboto","Microsoft JhengHei";}
     position: fixed;
     top: 0;
     width: 100%;
-
 }
 .container, .layoutgrid__lineGroup{
     height: 100%;
@@ -102,6 +103,34 @@ body{font-family: "Roboto","Microsoft JhengHei";}
 } 
 
 
+.emailSection{
+    -webkit-writing-mode: vertical-rl;
+    writing-mode: vertical-rl;
+    position: fixed;
+    right: 40px;
+    bottom: 0px;
+    font-size: .9em;
+    font-weight: 300;
+    letter-spacing: 1px;
+    padding-bottom: 110px;
+    
+}
+.emailSection::after{
+    content: "";
+    width: 1px;
+    height: 100px;
+    display: block;
+    bottom: 0;
+    position: absolute;
+    right: 12px;
+}
+
+
+.mediaSection{
+    position: fixed;
+    left: 40px;
+    bottom: 40px;
+}
 
 
 

@@ -16,3 +16,6 @@ a:hover{color: inherit;}
 
 
 .layoutgrid__lineGroup .layoutgrid__line{border-color: #233256;}
+
+
+.emailSection::after{background-color: #D8F1FF;}

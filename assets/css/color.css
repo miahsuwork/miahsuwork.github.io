@@ -1,0 +1,18 @@
+body{background-color: #131B2D; color: #D8F1FF;}
+a{color: inherit;}
+a:hover{color: inherit;}
+.nav-item.active{color: #0EC7A1;}
+.nav__itemNum{color: #0EC7A1;}
+.nav__line{background-color: #D8F1FF;}
+.nav-item.active .nav__line{background-color: #0EC7A1;}
+.nav-item.active .nav__itemNum{color: #D8F1FF;}
+
+.nav__tip .tooltiptext{background-color: #27364B; color: #D8F1FF;}
+
+
+.linkBtn{color: #0EC7A1; border-color: #0EC7A1; }
+.linkBtn:hover{color: #fff;}
+.linkBtn::before{background-color: #0EC7A1;}
+
+
+.layoutgrid__lineGroup .layoutgrid__line{border-color: #233256;}

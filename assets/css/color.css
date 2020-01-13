@@ -22,10 +22,15 @@ a:hover{color: inherit;}
 
 .mainVisualIdentity_backgroundText{color: rgba(172,122,255,.03);}
 .mainVisualIdentity_smallText{color: #0EC7A1;}
-.mainVisualIdentity_Name{}
+
 .mainVisualIdentity_Name::after{background-color: #FF4A6F;}
 .mainVisualIdentity_Features{color: #93A4AF;}
 .jobTitle{color: #93A4AF;}
 .redCircle{background-color: #FF4A6F;}
 .outlineCircle-green {border-color: #0EC7A1;}
 .outlineCircle-cyan{border-color: #92FFE9;}
+.title__text{color: #D2EFFF;}
+.title__text::after{background-color: #D2EFFF;}
+.title__num{color: #0EC7A1;}
+.title__num::after{background-color: #0EC7A1;}
+.skillList__item::before{color: #0EC7A1;}

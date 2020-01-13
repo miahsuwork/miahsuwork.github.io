@@ -1,6 +1,7 @@
 body{font-family: "Roboto","Microsoft JhengHei";}
 a{opacity: 1;}
 a:hover{opacity: 0.9;text-decoration: none;}
+p{line-height: 1.5;}
 .navbar{position: fixed;width: 100%; transition: top 0.3s; z-index: 5;}
 .nav__itemNum{display: block; font-size: 0.85em; transition: ease-in-out .2s;}
 .nav__item{padding-right: 25px; position: relative;margin: 5px; transition: ease-in-out .2s;}
@@ -228,4 +229,63 @@ a:hover{opacity: 0.9;text-decoration: none;}
     position: fixed;
     left: 60%;
     bottom: 30%;
+}
+
+
+
+
+.section{padding-top: 100px;padding-bottom: 100;}
+.title{
+    position: relative;
+    margin-bottom: 30px;
+}
+.title__text{
+    font-size: 36px;
+    font-weight: 500;
+    padding-left: 50px;
+    position: relative;
+}
+.title__text::after{
+    content: "";
+    width: 200px;
+    height: 1px;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    margin-left: 15px;
+
+}
+.title__num{
+    font-size: 14px;
+    font-weight: 300;
+    position: absolute;
+    top: -10px;
+}
+.title__num::after{
+    content: "";
+    background-color: #fff;
+    display: inline-block;
+    width: 16px;
+    height: 1px;
+    transform: rotate(305deg);
+    position: absolute;
+    left: 150%;
+    top: 125%;
+}
+
+
+.skillList{
+    display: grid;
+    grid-template-columns:repeat(2, minmax(140px, 200px));
+    padding-left: 0px;
+}
+.skillList__item{
+    list-style: none;
+    line-height: 1.5;
+}
+.skillList__item::before{
+    content: "►";/*填上你想要的項目符號*/
+    margin-right: 10px;
+    font-size: .2em;
 }

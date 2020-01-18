@@ -33,4 +33,12 @@ a:hover{color: inherit;}
 .title__text::after{background-color: #D2EFFF;}
 .title__num{color: #0EC7A1;}
 .title__num::after{background-color: #0EC7A1;}
-.skillList__item::before{color: #0EC7A1;}
+.list__item::before{color: #0EC7A1;}
+.worked__pills .worked__tab.active{
+    background-color: transparent;
+    color: #0EC7A1;
+}
+.worked__pills .worked__tab.active::before{
+    background-color: #0EC7A1;
+}
+.worked__title a{color: #0EC7A1;}

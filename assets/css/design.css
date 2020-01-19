@@ -1,7 +1,7 @@
 body{font-family: "Roboto","Microsoft JhengHei";}
-a{opacity: 1;}
+a{opacity: 1; transition: ease-in-out .2s;}
 a:hover{opacity: 0.9;text-decoration: none;}
-p{line-height: 1.5;}
+p{line-height: 1.5; text-align: justify;}
 .navbar{position: fixed;width: 100%; transition: top 0.3s; z-index: 5;}
 .nav__itemNum{display: block; font-size: 0.85em; transition: ease-in-out .2s;}
 .nav__item{padding-right: 25px; position: relative;margin: 5px; transition: ease-in-out .2s;}
@@ -234,10 +234,11 @@ p{line-height: 1.5;}
 
 
 
-.section{padding-top: 100px;padding-bottom: 100;}
+.section{padding-top: 120px;padding-bottom: 120px;}
 .title{
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
+
 }
 .title__text{
     font-size: 36px;
@@ -310,3 +311,140 @@ p{line-height: 1.5;}
 }
 .worked__title a{margin-left: 10px;}
 .worked__time{margin-bottom: 10px;display: block;}
+
+.workDescriptionGroup__name{
+    font-size: 1.5em;
+}
+.workDescriptionGroup__textArea{
+    padding: 1.2em ;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    min-height: 180px;
+}
+.workDescriptionGroup__text{
+    line-height: 1.5;
+}
+.projectItem{
+    margin-bottom: 100px;
+}
+.projectItem-seminar .workDescriptionGroup__textArea{
+    min-height: 0;
+}
+.projectItem-seminar .workDescriptionGroup__text{
+    margin-bottom: 0;
+}
+
+
+.toolGroup .toolGroup__item{
+    padding: .2em .5em;
+    font-size: .8em; 
+}
+.workImgGroup{
+    position: relative;
+}
+.workImgGroup__link .workImgGroup__img{
+    padding: 15px;
+}
+.workImgGroup__link .workImgGroup__img img{
+    transition: transform 0.4s, opacity 0.4s 0.1s ease-in-out, -webkit-transform 0.4s;
+    width: 100%;
+    
+}
+.workImgGroup__link:hover .workImgGroup__img img{
+    transform: scale(.9);
+}
+.workImgGroup__link .workImgGroup__frame{
+    border: 1px solid #0EC7A1;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    transform: scale(.9);
+    opacity: 0;
+    transition: all 0.3s, opacity 0.4s 0.1s ease-in-out, -webkit-all 0.3s;
+}
+.workImgGroup__link:hover .workImgGroup__frame{
+    opacity: 1;
+}
+
+.dots-line{
+        position: absolute;
+        z-index: 3;
+        left: 20px;
+        top: -20px;
+        height: 150px; 
+        width: 1px;
+        overflow: hidden;
+        -webkit-transform: rotate(40deg); 
+         transform: rotate(40deg);
+}
+.c-dots-line {
+    height: 100%;
+    width: 1px;
+    margin-left: 0;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.dots-line span:first-child{height: 100px;}
+.dots-line span:first-child::after{
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100px;
+    transition: all 0.3s;
+    margin-top: 0;
+}
+.dots-line span{
+    margin: 0 auto 6px; 
+    position: relative;
+    display: block;
+    height: 3px;
+    min-height: 1px;
+    width: 2px;
+}
+
+.workImgGroup__link:hover .dots-line span:first-child::after{height: 0px;} 
+.workDescriptionGroup__text a{cursor: pointer;}
+.webLink{float: right;}
+
+.carousel{
+    margin-top: 50px;
+}
+.carousel__item{
+    padding: .6em;
+    padding-bottom: 28px;
+    margin: 2em;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+    
+}
+.carousel__item:hover img{
+    transition: all 0.3s;
+}
+.carousel__item::after{
+    content: attr(data-name);
+    font-size: 8px;
+    position: absolute;
+    width: 101%;
+    z-index: 2;
+    bottom: -1px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0;
+    background-color: #0EC7A1;
+    padding: 2px;
+    color: #fff;
+    
+}
+.carousel__item.slick-center{
+    transform: scale(1.4);
+    border-color: #0EC7A1;
+}
+.carousel__item.slick-center:after{
+    opacity: 1;
+}
+.carousel__item.slick-center img:hover{
+    transform: scale(.95);
+}

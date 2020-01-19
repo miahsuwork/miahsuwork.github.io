@@ -3,12 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MiaHsu - Work </title>
 
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/css/slick.css" />
+    <link rel="stylesheet" href="assets/css/slick-theme.css" />
 
     <link rel="stylesheet" href="assets/css/design.css">
     <link rel="stylesheet" href="assets/css/color.css">
@@ -102,11 +105,11 @@
                         <h3 class="mainVisualIdentity_Features">I Love web </h3>
                         <p class="mainVisualIdentity_selfIntroduction">我是一名網頁設計師，現居台北<br>
                             個性開朗，樂於創新挑戰，嘗試不同的可能性</p>
-                        </div>
+                    </div>
                 </section>
                 <div class="col-3 jobTitle align-items-center">
                     <p class="text-center">Front-End Developer</p>
-                    <p class="text-center jobTitle_secondLine">and Web Designer 
+                    <p class="text-center jobTitle_secondLine">and Web Designer
                         <span class="redCircleGroup">
                             <span class="redCircle"></span>
                             <span class="redCircle"></span>
@@ -119,13 +122,15 @@
             </div>
 
 
-            <div class="row justify-content-between section">
-                <div class="col-6 about">
+            <div class="row justify-content-between section about">
+                <div class="col-6">
                     <h4 class="title">
                         <span class="title__num">01</span>
                         <span class="title__text">About Me</span>
                     </h4>
-                    <p>嗨！我是 Mia，原任職於服務業的我一直希望能將興趣結合於工作，因此在 2017 年 10 月參與恆逸的「互動式網站與 Mobile App 設計師養成班」在結業後的 1 個月內順利轉職網頁設計師，在工作上時刻保持虛心的學習心態與誠懇的態度認真完成工作上目標，工作之餘也持續進修前端技能的部分，自學 jQuery、JavaScript、SVG 動畫及 SASS 朝向前端工程師的方向前進。</p>
+                    <p>嗨！我是 Mia，原任職於服務業的我一直希望能將興趣結合於工作，因此在 2017 年 10 月參與恆逸的「互動式網站與 Mobile App 設計師養成班」在結業後的 1
+                        個月內順利轉職網頁設計師，在工作上時刻保持虛心的學習心態與誠懇的態度認真完成工作上目標，工作之餘也持續進修前端技能的部分，自學 jQuery、JavaScript、SVG 動畫及 SASS
+                        朝向前端工程師的方向前進。</p>
                     <p>以下是我最近使用的一些技術：</p>
                     <ul class="skillList list">
                         <li class="skillList__item list__item">JavaScript</li>
@@ -135,7 +140,7 @@
                         <li class="skillList__item list__item">Adobe XD</li>
                         <li class="skillList__item list__item">Illustrator</li>
                         <li class="skillList__item list__item">Photoshop</li>
-                        <li class="skillList__item list__item">Adobe Animate   </li>
+                        <li class="skillList__item list__item">Adobe Animate </li>
                     </ul>
                 </div>
                 <div class="col-3">
@@ -143,27 +148,32 @@
                 </div>
             </div>
 
-            <div class="row justify-content-between section">
-                <div class="offset-md-3 col-8 worked">
+            <div class="row justify-content-between section worked">
+                <div class="offset-md-3 col-8">
                     <h4 class="title">
                         <span class="title__num">02</span>
                         <span class="title__text">Where I've Worked</span>
                     </h4>
                     <div class="row">
                         <div class="col-3">
-                            <div class="nav flex-column nav-pills worked__pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <a class="nav-link active  worked__tab" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">TrendForce</a>
+                            <div class="nav flex-column nav-pills worked__pills" id="v-pills-tab" role="tablist"
+                                aria-orientation="vertical">
+                                <a class="nav-link active  worked__tab" id="v-pills-home-tab" data-toggle="pill"
+                                    href="#v-pills-home" role="tab" aria-controls="v-pills-home"
+                                    aria-selected="true">TrendForce</a>
                                 <!-- <a class="nav-link worked__tab" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
                                 <a class="nav-link worked__tab" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
                                 <a class="nav-link worked__tab" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a> -->
-                              </div>
+                            </div>
                         </div>
                         <div class="col-9">
 
                             <div class="tab-content" id="v-pills-tabContent">
-                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
-                                    <p class="worked__title">網頁設計師 <a href="https://www.trendforce.com.tw/" target="_blank">@ TrendForce</a></p>
-                                    <small class="worked__time">Feb 2018  - Present</small class="worked__title">  
+                                <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                                    aria-labelledby="v-pills-home-tab">
+                                    <p class="worked__title">網頁設計師 <a href="https://www.trendforce.com.tw/"
+                                            target="_blank">@ TrendForce</a></p>
+                                    <small class="worked__time">Feb 2018 - Present</small class="worked__title">
                                     <ul class="list">
                                         <li class="list__item">與後端協作開發與維護系統</li>
                                         <li class="list__item">實體/ 線上研討會 RWD 網站建置</li>
@@ -173,45 +183,156 @@
                                     </ul>
 
                                 </div>
-                                
-                                
+
+
                                 <!-- <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
                                 <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
                                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div> -->
-                              </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="row justify-content-between section">
-                <div class="col-12 about">
+            <div class="row section projects">
+                <div class="col-12">
                     <h4 class="title">
                         <span class="title__num">03</span>
                         <span class="title__text">Some Things I've Built</span>
                     </h4>
                 </div>
-                <div class="col-5">
-                    <small>Member system</small>
-                    <h5>會員系統</h5>
-                    <p>為內容型網站導入會員系統，UI/ UX 與前端切版獨立完成，並與後端 PHP 工程師合作開發前後台會員系統加以整合原有電子報功能，並與 Google 、 FaceBook 第三方註冊與登入功能。</p>
-                    <ul>
-                        <li>Wireframe</li>
-                        <li>Function map</li>
-                        <li>SASS</li>
-                        <li>Bootstrap</li>
-                        <li>jQuery</li>
-                    </ul>
-                </div>  
-                <div class="col-6">
-                    <div class="workItemGroup">
-                        <a href="">
-                            <div class="workItemGroup__frame"></div>
-                            <div class="workItemGroup__img"><img src="" alt=""></div>
-                        </a>
-                        <div class="workItemGroup__dots-line"></div>
+                <div class="col-12 projectItem">
+                    <div class="row justify-content-between">
+                        <div class="col-6 workDescriptionGroup">
+                            <span class="workDescriptionGroup__enName">Member system</span>
+                            <h5 class="workDescriptionGroup__name">會員系統</h5>
+                            <div class="workDescriptionGroup__textArea">
+                                <p class="workDescriptionGroup__text">為內容型網站導入會員系統，UI/ UX 與前端切版獨立完成，並與後端 PHP
+                                    工程師合作開發前後台會員系統加以整合原有電子報功能，並與 Google 、 FaceBook 第三方註冊與登入功能。<a class="#">...了解更多</a>
+                                </p>
+                                <a class="webLink" href="https://member.technews.tw/login" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+
+                            <ul class="nav toolGroup">
+                                <li class="toolGroup__item">Wireframe</li>
+                                <li class="toolGroup__item">Function map</li>
+                                <li class="toolGroup__item">SASS</li>
+                                <li class="toolGroup__item">Bootstrap</li>
+                                <li class="toolGroup__item">jQuery</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <div class="workImgGroup">
+                                <a class="workImgGroup__link" href="#">
+                                    <div class="workImgGroup__frame"></div>
+                                    <div class="workImgGroup__img"><img class="" src="assets/images/web01.jpg" alt="">
+                                    </div>
+
+                                    <div class="dots-line">
+                                        <div class="c-dots-line">
+                                            <span class=""></span>
+                                            <span class=""></span>
+                                            <span class=""></span>
+                                            <span class=""></span>
+                                            <span class=""></span>
+                                            <span class=""></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+
+                <div class="col-12 projectItem">
+                    <div class="row justify-content-between flex-lg-row-reverse">
+                        <div class="col-6 workDescriptionGroup">
+                            <span class="workDescriptionGroup__enName">Company Website</span>
+                            <h5 class="workDescriptionGroup__name">企業形象官網</h5>
+                            <div class="workDescriptionGroup__textArea">
+                                <p class="workDescriptionGroup__text">為 B2B 三語系企業形象官網，用戶提出以 WordPress
+                                    做為基底的需求並加以客製化，包含所有圖像及 Canvas 動畫，在製作的過程當中遇到問題模板上的問題也能迅速與國外模板商進行溝通排除。<a
+                                        class="#">...了解更多</a></p>
+                                <a class="webLink" href="https://www.prophetcomputing.com/" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i></a>
+                            </div>
+
+                            <ul class="nav toolGroup">
+                                <li class="toolGroup__item">WordPress</li>
+                                <li class="toolGroup__item">CSS</li>
+                                <li class="toolGroup__item">Canvas Animation</li>
+                                <li class="toolGroup__item">jQuery</li>
+                                <li class="toolGroup__item">SVG</li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <div class="workImgGroup">
+                                <a class="workImgGroup__link" href="#">
+                                    <div class="workImgGroup__frame"></div>
+                                    <div class="workImgGroup__img"><img class="" src="assets/images/web02.jpg" alt="">
+                                    </div>
+
+                                    <div class="dots-line">
+                                        <div class="c-dots-line">
+                                            <span class=""></span>
+                                            <span class=""></span>
+                                            <span class=""></span>
+                                            <span class=""></span>
+                                            <span class=""></span>
+                                            <span class=""></span>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 projectItem projectItem-seminar  ">
+                    <div class="row justify-content-center">
+                        <div class="col-12 workDescriptionGroup">
+                            <span class="workDescriptionGroup__enName">Seminar/ Webinar</span>
+                            <h5 class="workDescriptionGroup__name">實體/ 線上研討會</h5>
+                            <div class="workDescriptionGroup__textArea">
+                                <p class="workDescriptionGroup__text">單頁式活動型網站，製作時程短但依然為每一網站添加吸睛特色。</p>
+                            </div>
+
+                            <ul class="nav toolGroup">
+                                <li class="toolGroup__item">HTML</li>
+                                <li class="toolGroup__item">CSS</li>
+                                <li class="toolGroup__item">Bootstrap</li>
+                                <li class="toolGroup__item">JavaScript</li>
+                                <li class="toolGroup__item">jQuery</li>
+                                <li class="toolGroup__item">SVG Animation</li>
+                            </ul>
+                        </div>
+                        <div class="col-11">
+                            <div class="carousel">
+                                <div class="carousel__item" data-name="Compuforum 2018">
+                                    <a href=""><img class="w-100" src="assets/images/web02.jpg" alt="" ></a>
+                                </div>
+                                <div class="carousel__item" data-name="智慧型手機新時代商機線上研討會">
+                                    <a href=""><img class="w-100" src="assets/images/web01.jpg" alt="" ></a>
+                                </div>
+                                <div class="carousel__item" data-name="2019 智動化研討會">
+                                    <a href=""><img class="w-100" src="assets/images/web02.jpg" alt=""></a>
+                                </div>
+                                <div class="carousel__item" data-name="全球先進汽車市場 線上研討會">
+                                    <a href=""><img class="w-100" src="assets/images/web01.jpg" alt=""></a>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
             </div>
 
 
@@ -229,7 +350,13 @@
     <!-- Compiled and minified JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/fontawesome-5.12.0l.min.js"></script>
+    <!-- carousel -->
+    <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+
+
     <script>
+
         /*
         | menu active click add active
         */
@@ -257,10 +384,43 @@
         */
         $(window).resize(resizeHandler);
         $(window).triggerHandler("resize");
-        function resizeHandler(){
+        function resizeHandler() {
             var winH = $(window).height();
             $(".mainVisualIdentity").css("height", winH);
         }
+
+
+        $(document).ready(function () {
+
+            $('.carousel').slick({
+                autoplay: true,
+                autoplaySpeed: 2000,
+                pauseOnDotsHover: true,
+                centerMode: true,
+                centerPadding: '60px',
+                slidesToShow: 3,
+                responsive: [
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '50px',
+                            slidesToShow: 1
+                        }
+                    },
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            arrows: false,
+                            centerMode: true,
+                            centerPadding: '40px',
+                            slidesToShow: 1
+                        }
+                    }
+                ]
+            });
+        })
 
 
     </script>

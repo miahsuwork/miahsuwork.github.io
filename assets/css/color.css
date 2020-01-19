@@ -42,3 +42,14 @@ a:hover{color: inherit;}
     background-color: #0EC7A1;
 }
 .worked__title a{color: #0EC7A1;}
+.workDescriptionGroup__enName{color: #0EC7A1;}
+.workDescriptionGroup__textArea{background-color: rgba(39,52,77,.8);}
+.workDescriptionGroup__text a, .workDescriptionGroup__text a:hover{color: #0EC7A1;}
+.webLink, .webLink:hover{color: #0EC7A1;}
+
+.toolGroup .toolGroup__item{color: #93A4AF;}
+
+
+.workImgGroup__link .workImgGroup__frame{border-color: #0EC7A1;}
+.dots-line span:first-child::after{background-color: #0EC7A1;}
+.dots-line span:not(:first-child){background-color: #0EC7A1;}

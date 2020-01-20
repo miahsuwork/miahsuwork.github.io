@@ -471,3 +471,12 @@ p{line-height: 1.5; text-align: justify;}
 .carousel__item.slick-center img:hover{
     transform: scale(.95);
 }
+
+.projectItem-otherBtn{
+    text-align: center;
+}
+.projectItem-otherBtn .linkBtn{
+    font-size: 1.4em;
+    padding: .45em 1.5em;
+    z-index: 1;
+}

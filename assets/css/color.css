@@ -1,11 +1,11 @@
 body{background-color: #131B2D; color: #D8F1FF;}
 a{color: inherit;}
 a:hover{color: inherit;}
-.nav-item.active{color: #0EC7A1;}
+.nav-item a.active{color: #0EC7A1;}
 .nav__itemNum{color: #0EC7A1;}
 .nav__line{background-color: #D8F1FF;}
-.nav-item.active .nav__line{background-color: #0EC7A1;}
-.nav-item.active .nav__itemNum{color: #D8F1FF;}
+.nav-item a.active .nav__line{background-color: #0EC7A1;}
+.nav-item a.active .nav__itemNum{color: #D8F1FF;}
 
 .nav__tip .tooltiptext{background-color: #27364B; color: #D8F1FF;}
 

@@ -480,3 +480,24 @@ p{line-height: 1.5; text-align: justify;}
     padding: .45em 1.5em;
     z-index: 1;
 }
+
+
+
+.contact{padding-bottom: 200px;}
+.contactList{margin-bottom: 0;}
+.contactList__Item{
+    list-style: none;
+    font-size: 1.3em;
+    
+}
+
+.contactList__Item svg{
+    color: #0EC7A1;
+    margin-right: 10px;
+}
+
+
+.footer{
+    padding: 10px 0;
+}
+

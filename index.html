@@ -15,10 +15,11 @@
 
     <link rel="stylesheet" href="assets/css/design.css">
     <link rel="stylesheet" href="assets/css/color.css">
+    <script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
 
 </head>
 
-<body>
+<body onload="init();">
     <header>
         <nav id="navbar" class="navbar bg-transparent navbar-expand-lg">
             <a class="navbar-brand" href="#">
@@ -84,7 +85,7 @@
                         class="fab fa-medium fa-lg"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="https://medium.com/@miahsuwork" title="github" target="_blank"><i
+                <a class="nav-link" href="https://github.com/miahsu0330" title="github" target="_blank"><i
                         class="fab fa-github fa-lg"></i></a>
             </li>
         </ul>
@@ -311,17 +312,21 @@
                         <div class="col-11">
                             <div class="carousel">
                                 <div class="carousel__item" data-name="Compuforum 2018">
-                                    <a href="http://seminar.trendforce.com/Compuforum/2018/TW/index/" target="_blank"><img class="w-100" src="assets/images/seminar01.jpg" alt="" ></a>
+                                    <a href="http://seminar.trendforce.com/Compuforum/2018/TW/index/"
+                                        target="_blank"><img class="w-100" src="assets/images/seminar01.jpg" alt=""></a>
                                 </div>
                                 <div class="carousel__item" data-name="智慧型手機新時代商機線上研討會">
-                                    <a href="https://webinar.trendforce.com/smartphone_trend_2019_webinar-ch/index.html" target="_blank"><img class="w-100" src="assets/images/seminar02.jpg" alt="" ></a>
+                                    <a href="https://webinar.trendforce.com/smartphone_trend_2019_webinar-ch/index.html"
+                                        target="_blank"><img class="w-100" src="assets/images/seminar02.jpg" alt=""></a>
                                 </div>
                                 <div class="carousel__item" data-name="2019 智動化研討會">
-                                    <a href="https://webinar.trendforce.com/smartphone_trend_2019_webinar-ch/index.html" target="_blank"><img class="w-100" src="assets/images/seminar03.jpg" alt=""></a>
+                                    <a href="https://webinar.trendforce.com/smartphone_trend_2019_webinar-ch/index.html"
+                                        target="_blank"><img class="w-100" src="assets/images/seminar03.jpg" alt=""></a>
                                 </div>
                                 <div class="carousel__item" data-name="全球先進汽車市場 線上研討會">
-                                    <a href="https://webinar.trendforce.com/smartphone_trend_2019_webinar-ch/index.html" target="_blank"><img class="w-100" src="assets/images/seminar04.jpg" alt=""></a>
-                                    
+                                    <a href="https://webinar.trendforce.com/smartphone_trend_2019_webinar-ch/index.html"
+                                        target="_blank"><img class="w-100" src="assets/images/seminar04.jpg" alt=""></a>
+
                                 </div>
                             </div>
 
@@ -336,14 +341,38 @@
 
 
 
-            <div id="contact" class="row justify-content-between section">
+            <div id="contact" class="row justify-content-between section contact">
                 <div class="offset-md-3 col-8">
                     <h4 class="title">
                         <span class="title__num">04</span>
                         <span class="title__text">CONTACT</span>
                     </h4>
-                    <div class="row">
-                        
+                    <div class="row align-items-center">
+                        <div class="col-5">
+                            <div id="animation_container">
+                                <canvas id="canvas"style="position: absolute; display: block;"></canvas>
+                                <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; position: absolute; left: 0px; top: 0px; display: block;">
+                                </div>
+                            </div>
+                                                </div>
+                        <div class="col-7">
+                            <ul class="contactList">
+                                <li class="contactList__Item">
+                                    <a class="nav-link" href="mailto:miahsuwork@gmail.com" title="medium" target="_blank">
+                                        <i class="fas fa-envelope fa-lg fa-fw"></i>miahsuwork@gmail.com
+                                    </a>
+                                </li>
+                                <li class="contactList__Item">
+                                    <a class="nav-link" href="https://www.cakeresume.com/s--LwU5PNF3o_Q8fHXszw1tCg--/miahsuwork" title="cakeresume" target="_blank"><i class="fab fa-cuttlefish fa-lg fa-fw"></i>CakeResume</a>
+                                    </li>
+                                <li class="contactList__Item"><a class="nav-link" href="https://github.com/miahsu0330" title="medium"
+                                        target="_blank">
+                                        <i class="fab fa-github fa-lg fa-fw"></i>GitHub
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -354,7 +383,12 @@
     </main>
 
 
-    
+    <footer  class="footer text-center"><small>COPYRIGHT (C) 2020  MIA</small></footer>
+
+
+
+
+
     <script src="assets/js/jquery-3.4.1.min.js"></script>
     <!-- Compiled and minified JavaScript -->
     <script src="assets/js/bootstrap.min.js"></script>
@@ -362,7 +396,11 @@
     <!-- carousel -->
     <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <!-- scrolling nav -->
     <script type="text/javascript" src="assets/js/scrolling-nav.js"></script>
+    <!-- contact canvas -->
+    <script src="assets/animate/graphic.js"></script>
+
 
 
     <script>
@@ -426,6 +464,7 @@
 
 
     </script>
+
 </body>
 
 

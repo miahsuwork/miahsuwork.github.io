@@ -124,6 +124,7 @@
 
 
             <div id="about" class="row justify-content-between section about">
+                <div class="outlineCircle outlineCircle-cyan outlineCircle-small"></div>
                 <div class="col-6">
                     <h4 class="title">
                         <span class="title__num">01</span>
@@ -147,9 +148,14 @@
                 <div class="col-3">
                     <img src="https://avatars2.githubusercontent.com/u/50665086?s=460&v=4" alt="" class="w-100">
                 </div>
+                <div class="outlineCircle outlineCircle-green outlineCircle-big"></div>
             </div>
 
             <div id="worked" class="row justify-content-between section worked">
+                <span class="redCircleGroup">
+                    <span class="redCircle"></span>
+                    <span class="redCircle"></span>
+                </span>
                 <div class="offset-md-3 col-8">
                     <h4 class="title">
                         <span class="title__num">02</span>
@@ -196,6 +202,7 @@
             </div>
 
             <div id="projects" class="row section projects">
+                <div class="outlineCircle outlineCircle-green outlineCircle-big"></div> 
                 <div class="col-12">
                     <h4 class="title">
                         <span class="title__num">03</span>
@@ -337,11 +344,16 @@
                 <div class="col-12 projectItem projectItem-otherBtn">
                     <button class="btn linkBtn">Other Noteworthy Projects</button>
                 </div>
+                <div class="outlineCircle outlineCircle-cyan outlineCircle-small"></div> 
             </div>
 
 
 
             <div id="contact" class="row justify-content-between section contact">
+                <span class="redCircleGroup">
+                    <span class="redCircle"></span>
+                    <span class="redCircle"></span>
+                </span>
                 <div class="offset-md-3 col-8">
                     <h4 class="title">
                         <span class="title__num">04</span>
@@ -374,7 +386,10 @@
                         </div>
 
                     </div>
+                    <div class="outlineCircle outlineCircle-green outlineCircle-small"></div>
+                    <div class="outlineCircle outlineCircle-green outlineCircle-big"></div>
                 </div>
+                
             </div>
 
 
@@ -401,69 +416,8 @@
     <!-- contact canvas -->
     <script src="assets/animate/graphic.js"></script>
 
+    <script type="text/javascript" src="assets/js/main.js"></script>
 
-
-    <script>
-
-        /*
-        | When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar 
-        */
-        var prevScrollpos = window.pageYOffset;
-        window.onscroll = function () {
-            var currentScrollPos = window.pageYOffset;
-            if (prevScrollpos > currentScrollPos) {
-                document.getElementById("navbar").style.top = "0";
-            } else {
-                document.getElementById("navbar").style.top = "-80px";
-            }
-            prevScrollpos = currentScrollPos;
-        }
-
-        /*
-        | mainVisualIdentity vlign
-        */
-        $(window).resize(resizeHandler);
-        $(window).triggerHandler("resize");
-        function resizeHandler() {
-            var winH = $(window).height();
-            $(".mainVisualIdentity").css("height", winH);
-        }
-
-
-        $(document).ready(function () {
-
-            $('.carousel').slick({
-                autoplay: true,
-                autoplaySpeed: 3000,
-                pauseOnDotsHover: true,
-                centerMode: true,
-                centerPadding: '60px',
-                slidesToShow: 3,
-                responsive: [
-                    {
-                        breakpoint: 768,
-                        settings: {
-                            arrows: false,
-                            centerMode: true,
-                            centerPadding: '50px',
-                            slidesToShow: 1
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            arrows: false,
-                            centerMode: true,
-                            centerPadding: '40px',
-                            slidesToShow: 1
-                        }
-                    }
-                ]
-            });
-        })
-
-
-    </script>
 
 </body>
 

@@ -14,9 +14,7 @@ a:hover{color: inherit;}
 .linkBtn:hover{color: #fff;}
 .linkBtn::before{background-color: #0EC7A1;}
 
-
 .layoutgrid__lineGroup .layoutgrid__line{border-color: #233256;}
-
 
 .emailSection::after{background-color: #D8F1FF;}
 

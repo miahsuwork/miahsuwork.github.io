@@ -1,7 +1,14 @@
-body{font-family: "Roboto","Microsoft JhengHei";}
+body{font-family:"Roboto","Microsoft JhengHei";}
 a{opacity: 1; transition: ease-in-out .2s;}
 a:hover{opacity: 0.9;text-decoration: none;}
 p{line-height: 1.5; text-align: justify;}
+
+
+
+
+/*
+| nav style
+*/
 .navbar{position: fixed;width: 100%; transition: top 0.3s; z-index: 5;}
 .nav__itemNum{display: block; font-size: 0.85em; transition: ease-in-out .2s;}
 .nav__item{padding-right: 25px; position: relative;margin: 5px; transition: ease-in-out .2s;}
@@ -63,7 +70,9 @@ p{line-height: 1.5; text-align: justify;}
 
 
 
-
+/*
+| button style
+*/
 .linkBtn{
     border: 1px solid #000;
     position: relative;
@@ -79,12 +88,14 @@ p{line-height: 1.5; text-align: justify;}
     top: 0; 
     z-index: -1;
 }
-.linkBtn:hover::before{
-    width: 100%;
-}
+.linkBtn:hover::before{width: 100%;}
 
 
 
+
+/*
+| background line style
+*/
 .layoutgrid{
     z-index: -1;
     height: 100%;
@@ -92,9 +103,7 @@ p{line-height: 1.5; text-align: justify;}
     top: 0;
     width: 100%;
 }
-.container, .layoutgrid__lineGroup{
-    height: 100%;
-}
+.container, .layoutgrid__lineGroup{height: 100%;}
 .layoutgrid__line{
     border-right: 1px solid #000;
     height: 100%;
@@ -104,7 +113,9 @@ p{line-height: 1.5; text-align: justify;}
     border-left: 1px solid #000;
 } 
 
-
+/*
+| email and social style
+*/
 .emailSection{
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
@@ -115,7 +126,6 @@ p{line-height: 1.5; text-align: justify;}
     font-weight: 300;
     letter-spacing: 1px;
     padding-bottom: 110px;
-    
 }
 .emailSection::after{
     content: "";
@@ -126,16 +136,17 @@ p{line-height: 1.5; text-align: justify;}
     position: absolute;
     right: 12px;
 }
-
-
 .mediaSection{
     position: fixed;
     left: 40px;
     bottom: 40px;
+    z-index: 2;
 }
 
 
-
+/*
+| container style - 主視覺
+*/
 .container{position: relative;}
 .mainVisualIdentity{position: relative;}
 .mainVisualIdentity__textArea{position: relative;}
@@ -162,19 +173,12 @@ p{line-height: 1.5; text-align: justify;}
     position: relative;
     right: -20px;
     bottom: -5px;
-}
-    
-.mainVisualIdentity_Features{
-    font-size: 100px;
-}
-.mainVisualIdentity_selfIntroduction{
-    font-size: 16px;
-}
-
+}  
+.mainVisualIdentity_Features{font-size: 100px;}
+.mainVisualIdentity_selfIntroduction{font-size: 16px;}
 .jobTitle{
     -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
-
 }
 .jobTitle p{
     margin: 0;
@@ -185,6 +189,11 @@ p{line-height: 1.5; text-align: justify;}
     position: relative;
     
 }
+
+
+/*
+| container style - dot
+*/
 .redCircle:first-child{margin-top: 10px;}
 .redCircle{
     width: 8px;
@@ -209,6 +218,11 @@ p{line-height: 1.5; text-align: justify;}
     height: 46px;
     border-width: 14px;
 }
+.outlineCircle-small{
+    width: 30px;
+    height: 30px;
+    border-width: 9px;
+}
 .mainVisualIdentity .outlineCircle.outlineCircle-green{
     bottom: 25%;
     left: -10%;
@@ -231,14 +245,48 @@ p{line-height: 1.5; text-align: justify;}
     bottom: 30%;
 }
 
+.about .outlineCircle-cyan{
+    bottom: 0;
+    left: 2%;
+}
+.about .outlineCircle-green{
+    bottom: 10%;
+    right: 0%;
+}
+.worked .redCircleGroup{
+    writing-mode: vertical-rl;
+    left: 10%;
+    position: absolute;
+    top: 50%;  
+}
+.projects .outlineCircle-green{
+    top: 25%;
+    left: -10%;
+}
+.projects .outlineCircle-cyan{
+    bottom: 5%;
+    right: 10%;
+}
+.contact .redCircleGroup{
+    writing-mode: vertical-rl;
+    position: absolute;
+}
+.contact .outlineCircle-big{
+    bottom: -30%;
+    left: -10%;
+}
+.contact .outlineCircle-small{
+    top: 20%;
+    right: -10%;
+}
+.section{padding-top: 120px;padding-bottom: 120px; position: relative;}
 
-
-
-.section{padding-top: 120px;padding-bottom: 120px;}
+/*
+| components title
+*/
 .title{
     position: relative;
     margin-bottom: 80px;
-
 }
 .title__text{
     font-size: 36px;
@@ -276,6 +324,10 @@ p{line-height: 1.5; text-align: justify;}
 }
 
 
+
+/*
+| components list
+*/
 .list{padding-left: 0px;}
 .list__item{
     list-style: none;
@@ -290,6 +342,7 @@ p{line-height: 1.5; text-align: justify;}
     display: grid;
     grid-template-columns:repeat(2, minmax(140px, 200px));
 }
+
 
 .worked__tab{
     position: relative;
@@ -339,6 +392,12 @@ p{line-height: 1.5; text-align: justify;}
     padding: .2em .5em;
     font-size: .8em; 
 }
+
+
+
+/*
+| components img animation
+*/
 .workImgGroup{
     position: relative;
 }
@@ -366,17 +425,16 @@ p{line-height: 1.5; text-align: justify;}
 .workImgGroup__link:hover .workImgGroup__frame{
     opacity: 1;
 }
-
 .dots-line{
-        position: absolute;
-        z-index: 3;
-        left: 15px;
-        top: -20px;
-        height: 150px; 
-        width: 1px;
-        overflow: hidden;
-        -webkit-transform: rotate(40deg); 
-         transform: rotate(40deg);
+    position: absolute;
+    z-index: 3;
+    left: 15px;
+    top: -20px;
+    height: 150px; 
+    width: 1px;
+    overflow: hidden;
+    -webkit-transform: rotate(40deg); 
+    transform: rotate(40deg);
 }
 .c-dots-line {
     height: 100%;
@@ -404,7 +462,6 @@ p{line-height: 1.5; text-align: justify;}
     min-height: 1px;
     width: 2px;
 }
-
 .projectItem:nth-child(odd) .workImgGroup__link .workImgGroup__img,.projectItem:nth-child(odd) .workImgGroup__link .workImgGroup__frame{
     left: -15px;
 }
@@ -420,6 +477,11 @@ p{line-height: 1.5; text-align: justify;}
 .workDescriptionGroup__text a{cursor: pointer;}
 .webLink{float: right;}
 
+
+
+/*
+| components carousel
+*/
 .carousel{
     margin-top: 50px;
 }
@@ -459,22 +521,12 @@ p{line-height: 1.5; text-align: justify;}
     text-align: center;
     opacity: 0;
     padding: 3px;
-    color: #fff;
-    
+    color: #fff;  
 }
-.carousel__item.slick-center{
-    transform: scale(1.3);  
-}
-.carousel__item.slick-center:after{
-    opacity: 1;
-}
-.carousel__item.slick-center img:hover{
-    transform: scale(.95);
-}
-
-.projectItem-otherBtn{
-    text-align: center;
-}
+.carousel__item.slick-center{transform: scale(1.3);}
+.carousel__item.slick-center:after{opacity: 1;}
+.carousel__item.slick-center img:hover{transform: scale(.95);}
+.projectItem-otherBtn{text-align: center;}
 .projectItem-otherBtn .linkBtn{
     font-size: 1.4em;
     padding: .45em 1.5em;
@@ -487,10 +539,8 @@ p{line-height: 1.5; text-align: justify;}
 .contactList{margin-bottom: 0;}
 .contactList__Item{
     list-style: none;
-    font-size: 1.3em;
-    
+    font-size: 1.3em; 
 }
-
 .contactList__Item svg{
     color: #0EC7A1;
     margin-right: 10px;

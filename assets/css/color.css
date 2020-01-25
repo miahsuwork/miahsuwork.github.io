@@ -8,7 +8,7 @@ a:hover{color: inherit;}
 .nav-item a.active .nav__itemNum{color: #D8F1FF;}
 
 .nav__tip .tooltiptext{background-color: #27364B; color: #D8F1FF;}
-
+.backgroundColor{background-color: rgba(19, 27, 45, 0.8 );}
 
 .linkBtn{color: #0EC7A1; border-color: #0EC7A1; }
 .linkBtn:hover{color: #fff;}
@@ -58,3 +58,11 @@ a:hover{color: inherit;}
 .carousel__item.slick-center{border-color: #0EC7A1;}
 .carousel__item.slick-center a::before{background-color: rgba(14,199,161,0);}
 .carousel__item:hover a::before{background-color: rgba(14,199,161,0);}
+
+
+@media (max-width: 767px) {
+    #navbar.navbar{background-color: #131B2D;box-shadow: 0px 3px 8px rgba(0,0,0,.4);}
+    .navbar-toggler{color: #fff;}
+
+    .navbar-toggler{color: #0EC7A1;}
+}

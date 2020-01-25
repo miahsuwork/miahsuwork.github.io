@@ -3,13 +3,11 @@ a{opacity: 1; transition: ease-in-out .2s;}
 a:hover{opacity: 0.9;text-decoration: none;}
 p{line-height: 1.5; text-align: justify;}
 
-
-
-
 /*
 | nav style
 */
-.navbar{position: fixed;width: 100%; transition: top 0.3s; z-index: 5;}
+.navbar{position: fixed;width: 100%; transition: top 0.3s; z-index: 5; padding-left: 50px; padding-right: 50px;}
+.navbar-toggler:focus {outline: none;}  
 .nav__itemNum{display: block; font-size: 0.85em; transition: ease-in-out .2s;}
 .nav__item{padding-right: 25px; position: relative;margin: 5px; transition: ease-in-out .2s;}
 .nav__item:last-child{margin-right: 40px;}
@@ -113,6 +111,16 @@ p{line-height: 1.5; text-align: justify;}
     border-left: 1px solid #000;
 } 
 
+
+.overlay{
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    display: none;
+}
+
 /*
 | email and social style
 */
@@ -140,7 +148,7 @@ p{line-height: 1.5; text-align: justify;}
     position: fixed;
     left: 40px;
     bottom: 40px;
-    z-index: 2;
+    z-index: 1;
 }
 
 
@@ -463,19 +471,19 @@ p{line-height: 1.5; text-align: justify;}
     width: 2px;
 }
 .projectItem:nth-child(odd) .workImgGroup__link .workImgGroup__img,.projectItem:nth-child(odd) .workImgGroup__link .workImgGroup__frame{
-    left: -15px;
-}
-.projectItem:nth-child(even) .workImgGroup__link .workImgGroup__img,.projectItem:nth-child(even) .workImgGroup__link .workImgGroup__frame{
     right: -15px;
 }
-.projectItem:nth-child(odd) .dots-line{left: 0px;}
-.projectItem:nth-child(even) .dots-line{left: 30px;}
+.projectItem:nth-child(even) .workImgGroup__link .workImgGroup__img,.projectItem:nth-child(even) .workImgGroup__link .workImgGroup__frame{
+    left: -15px;
+}
+.projectItem:nth-child(even) .dots-line{left: 0px;}
+.projectItem:nth-child(odd) .dots-line{left: 30px;}
 
 
 
 .workImgGroup__link:hover .dots-line span:first-child::after{height: 0px;} 
 .workDescriptionGroup__text a{cursor: pointer;}
-.webLink{float: right;}
+.webLinkOuter{text-align: right;}
 
 
 
@@ -550,4 +558,54 @@ p{line-height: 1.5; text-align: justify;}
 .footer{
     padding: 10px 0;
 }
+
+
+
+@media (max-width: 996px) {
+    /* .emailSection,.mediaSection{display: none;} */
+    .mainVisualIdentity .jobTitle .outlineCircle.outlineCircle-green{display: none;}   
+    .projectItem:nth-child(even) .workImgGroup__link .workImgGroup__img, .projectItem:nth-child(even) .workImgGroup__link .workImgGroup__frame{
+        left: auto;
+        right: -15px;
+    }
+    .projectItem:nth-child(even) .dots-line{
+        left: 30px;
+    }
+}
+
+@media (max-width: 767px) {
+    .nav__hidden{display: none;}
+    .navbar-collapse{text-align: center;}
+    .nav__item{padding-right: 0px;margin:0; margin-bottom: 20px;}
+    .nav__item:last-child {margin-right: 0px;}
+    .nav__item:first-child {margin-top: 20px;}
+    .navbar-collapse .linkBtn{margin-bottom: 30px;}
+
+
+    .mainVisualIdentity_backgroundText{font-size: 250px;}
+    .mainVisualIdentity_Name,.mainVisualIdentity_Features{font-size: 80px;}
+    
+
+
+    .outlineCircle-big{
+        width: 50px;
+        height: 50px;
+        border-width: 16px;
+    }
+    .outlineCircle-middle{
+        width: 35px;
+        height: 35px;
+        border-width: 11px;
+    }
+    .outlineCircle-small{
+        width: 20px;
+        height: 20px;
+        border-width: 8px;
+    }
+
+    .title__text::after{display: none;}
+    
+
+}
+
 

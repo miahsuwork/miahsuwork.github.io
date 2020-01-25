@@ -4,10 +4,18 @@
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function () {
     var currentScrollPos = window.pageYOffset;
+    var element = document.getElementById("navbar");
     if (prevScrollpos > currentScrollPos) {
-        document.getElementById("navbar").style.top = "0";
+        element.style.top = "0";
+        element.classList.add("backgroundColor");
+
     } else {
-        document.getElementById("navbar").style.top = "-80px";
+        element.style.top = "-80px";
+        element.classList.remove("backgroundColor");
+    }
+
+    if (currentScrollPos === 0) {
+        element.classList.remove("backgroundColor");
     }
     prevScrollpos = currentScrollPos;
 }
@@ -24,6 +32,25 @@ function resizeHandler() {
 
 
 $(document).ready(function () {
+    /*
+    | 修正 navbar hiden and show
+    */
+    $('.navbar-nav a').on('click', function () {
+        $('.navbar-collapse').collapse('hide');
+    });
+    $(document).click(function() {
+        $('.navbar-collapse').collapse('hide');
+    });
+    $('#navbar').on('show.bs.collapse', function () {
+        document.documentElement.style.overflowY = 'hidden';
+        $(".overlay").fadeIn();
+    })
+    $('#navbar').on('hidden.bs.collapse', function () {
+        document.documentElement.style.overflowY = 'scroll';
+        $(".overlay").fadeOut   ();
+    })
+
+    
 
     $('.carousel').slick({
         autoplay: true,

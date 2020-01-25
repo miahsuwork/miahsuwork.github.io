@@ -21,13 +21,13 @@
 
 <body onload="init();">
     <header>
-        <nav id="navbar" class="navbar bg-transparent navbar-expand-lg">
+        <nav id="navbar" class="navbar navbar-expand-md">
             <a class="navbar-brand" href="#">
                 MiaHsu
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                <i class="fas fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav">
@@ -43,8 +43,8 @@
                             EXPERIENCE<span class="nav__hidden"><span class="nav__line"></span>
                         </a>
                     </li>
-                    <li class="nav-item nav__item nav__tip">
-                        <a class="nav-link nav__link js-scroll-trigger" href="#projects">
+                    <li class="nav-item nav__item nav__tip dropdown">
+                        <a class="nav-link nav__link js-scroll-trigger " href="#projects">
                             <span class="nav__itemNum">03</span>
                             WORKS<span class="nav__hidden"><span class="nav__line"></span>
                         </a>
@@ -72,7 +72,7 @@
             </div>
         </div>
     </div>
-
+    <div class="overlay"></div>
     <div class="emailSection"><a href="mailto:miahsuwork@gmail.com">miahsuwork@gmail.com</a></div>
     <div class="mediaSection">
         <ul class="nav flex-column">
@@ -98,7 +98,7 @@
                     DES<br>
                     ING
                 </div>
-                <section class="col-6 d-flex align-items-center mainVisualIdentity__textArea">
+                <section class="col-10 col-lg-6 d-flex align-items-center mainVisualIdentity__textArea">
                     <div class="outlineCircle outlineCircle-green outlineCircle-middle"></div>
                     <div class="">
                         <small class="mainVisualIdentity_smallText">Hi, my name is</small>
@@ -108,7 +108,7 @@
                             個性開朗，樂於創新挑戰，嘗試不同的可能性</p>
                     </div>
                 </section>
-                <div class="col-3 jobTitle align-items-center">
+                <div class="col-2 col-lg-3 jobTitle align-items-center">
                     <p class="text-center">Front-End Developer</p>
                     <p class="text-center jobTitle_secondLine">and Web Designer
                         <span class="redCircleGroup">
@@ -125,11 +125,13 @@
 
             <div id="about" class="row justify-content-between section about">
                 <div class="outlineCircle outlineCircle-cyan outlineCircle-small"></div>
-                <div class="col-6">
+                <div class="col-12">
                     <h4 class="title">
                         <span class="title__num">01</span>
                         <span class="title__text">About Me</span>
                     </h4>
+                </div>
+                <div class="col-md-8 col-lg-6">
                     <p>嗨！我是 Mia，原任職於服務業的我一直希望能將興趣結合於工作，因此在 2017 年 10 月參與恆逸的「互動式網站與 Mobile App 設計師養成班」在結業後的 1
                         個月內順利轉職網頁設計師，在工作上時刻保持虛心的學習心態與誠懇的態度認真完成工作上目標，工作之餘也持續進修前端技能的部分，自學 jQuery、JavaScript、SVG 動畫及 SASS
                         朝向前端工程師的方向前進。</p>
@@ -145,7 +147,7 @@
                         <li class="skillList__item list__item">Adobe Animate </li>
                     </ul>
                 </div>
-                <div class="col-3">
+                <div class="col-md-4 col-lg-3">
                     <img src="https://avatars2.githubusercontent.com/u/50665086?s=460&v=4" alt="" class="w-100">
                 </div>
                 <div class="outlineCircle outlineCircle-green outlineCircle-big"></div>
@@ -156,7 +158,7 @@
                     <span class="redCircle"></span>
                     <span class="redCircle"></span>
                 </span>
-                <div class="offset-md-3 col-8">
+                <div class="offset-lg-3 col-12 col-lg-8">
                     <h4 class="title">
                         <span class="title__num">02</span>
                         <span class="title__text">Where I've Worked</span>
@@ -202,7 +204,7 @@
             </div>
 
             <div id="projects" class="row section projects">
-                <div class="outlineCircle outlineCircle-green outlineCircle-big"></div> 
+                <div class="outlineCircle outlineCircle-green outlineCircle-big"></div>
                 <div class="col-12">
                     <h4 class="title">
                         <span class="title__num">03</span>
@@ -211,15 +213,18 @@
                 </div>
                 <div class="col-12 projectItem">
                     <div class="row justify-content-between">
-                        <div class="col-6 workDescriptionGroup">
+                        <div class="col-12">
                             <span class="workDescriptionGroup__enName">Member system</span>
                             <h5 class="workDescriptionGroup__name">會員系統</h5>
+                        </div>
+                        <div class="col-6 workDescriptionGroup">
                             <div class="workDescriptionGroup__textArea">
                                 <p class="workDescriptionGroup__text">為內容型網站導入會員系統，UI/ UX 與前端切版獨立完成，並與後端 PHP
                                     工程師合作開發前後台會員系統加以整合原有電子報功能，並與 Google 、 FaceBook 第三方註冊與登入功能。<a class="#">...了解更多</a>
                                 </p>
-                                <a class="webLink" href="https://member.technews.tw/login" target="_blank"><i
-                                        class="fas fa-external-link-alt"></i></a>
+                                <div class="webLinkOuter"><a class="webLink" href="https://member.technews.tw/login"
+                                        target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
+
                             </div>
 
                             <ul class="nav toolGroup">
@@ -256,15 +261,18 @@
 
                 <div class="col-12 projectItem">
                     <div class="row justify-content-between flex-lg-row-reverse">
-                        <div class="col-6 workDescriptionGroup">
+                        <div class="col-12">
                             <span class="workDescriptionGroup__enName">Company Website</span>
                             <h5 class="workDescriptionGroup__name">企業形象官網</h5>
+                        </div>
+                        <div class="col-6 workDescriptionGroup">
+
                             <div class="workDescriptionGroup__textArea">
                                 <p class="workDescriptionGroup__text">為 B2B 三語系企業形象官網，用戶提出以 WordPress
                                     做為基底的需求並加以客製化，包含所有圖像及 Canvas 動畫，在製作的過程當中遇到問題模板上的問題也能迅速與國外模板商進行溝通排除。<a
                                         class="#">...了解更多</a></p>
-                                <a class="webLink" href="https://www.prophetcomputing.com/" target="_blank"><i
-                                        class="fas fa-external-link-alt"></i></a>
+                                <div class="webLinkOuter"><a class="webLink" href="https://www.prophetcomputing.com/"
+                                        target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
                             </div>
 
                             <ul class="nav toolGroup">
@@ -344,7 +352,7 @@
                 <div class="col-12 projectItem projectItem-otherBtn">
                     <button class="btn linkBtn">Other Noteworthy Projects</button>
                 </div>
-                <div class="outlineCircle outlineCircle-cyan outlineCircle-small"></div> 
+                <div class="outlineCircle outlineCircle-cyan outlineCircle-small"></div>
             </div>
 
 
@@ -354,7 +362,7 @@
                     <span class="redCircle"></span>
                     <span class="redCircle"></span>
                 </span>
-                <div class="offset-md-3 col-8">
+                <div class="offset-lg-3 col-12 col-lg-8">
                     <h4 class="title">
                         <span class="title__num">04</span>
                         <span class="title__text">CONTACT</span>
@@ -362,23 +370,28 @@
                     <div class="row align-items-center">
                         <div class="col-5">
                             <div id="animation_container">
-                                <canvas id="canvas"style="position: absolute; display: block;"></canvas>
-                                <div id="dom_overlay_container" style="pointer-events:none; overflow:hidden; position: absolute; left: 0px; top: 0px; display: block;">
+                                <canvas id="canvas" style="position: absolute; display: block;"></canvas>
+                                <div id="dom_overlay_container"
+                                    style="pointer-events:none; overflow:hidden; position: absolute; left: 0px; top: 0px; display: block;">
                                 </div>
                             </div>
-                                                </div>
+                        </div>
                         <div class="col-7">
                             <ul class="contactList">
                                 <li class="contactList__Item">
-                                    <a class="nav-link" href="mailto:miahsuwork@gmail.com" title="medium" target="_blank">
+                                    <a class="nav-link" href="mailto:miahsuwork@gmail.com" title="medium"
+                                        target="_blank">
                                         <i class="fas fa-envelope fa-lg fa-fw"></i>miahsuwork@gmail.com
                                     </a>
                                 </li>
                                 <li class="contactList__Item">
-                                    <a class="nav-link" href="https://www.cakeresume.com/s--LwU5PNF3o_Q8fHXszw1tCg--/miahsuwork" title="cakeresume" target="_blank"><i class="fab fa-cuttlefish fa-lg fa-fw"></i>CakeResume</a>
-                                    </li>
-                                <li class="contactList__Item"><a class="nav-link" href="https://github.com/miahsu0330" title="medium"
-                                        target="_blank">
+                                    <a class="nav-link"
+                                        href="https://www.cakeresume.com/s--LwU5PNF3o_Q8fHXszw1tCg--/miahsuwork"
+                                        title="cakeresume" target="_blank"><i
+                                            class="fab fa-cuttlefish fa-lg fa-fw"></i>CakeResume</a>
+                                </li>
+                                <li class="contactList__Item"><a class="nav-link" href="https://github.com/miahsu0330"
+                                        title="medium" target="_blank">
                                         <i class="fab fa-github fa-lg fa-fw"></i>GitHub
                                     </a>
                                 </li>
@@ -389,7 +402,7 @@
                     <div class="outlineCircle outlineCircle-green outlineCircle-small"></div>
                     <div class="outlineCircle outlineCircle-green outlineCircle-big"></div>
                 </div>
-                
+
             </div>
 
 
@@ -398,7 +411,7 @@
     </main>
 
 
-    <footer  class="footer text-center"><small>COPYRIGHT (C) 2020  MIA</small></footer>
+    <footer class="footer text-center"><small>COPYRIGHT (C) 2020 MIA</small></footer>
 
 
 

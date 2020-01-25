@@ -559,7 +559,9 @@ p{line-height: 1.5; text-align: justify;}
     padding: 10px 0;
 }
 
-
+@media (max-width: 1200px) {
+    .emailSection,.mediaSection{display: none;}
+}
 
 @media (max-width: 996px) {
     /* .emailSection,.mediaSection{display: none;} */
@@ -606,6 +608,23 @@ p{line-height: 1.5; text-align: justify;}
     .title__text::after{display: none;}
     
 
+    .contact .outlineCircle-small{
+        right: 0;
+    }
+
 }
 
 
+@media (max-width: 576px) {
+    .jobTitle{display: none;}
+    .animationOuter{display: none;}
+    .mainVisualIdentity_backgroundText{font-size: 200px;}
+    .mainVisualIdentity_Name,.mainVisualIdentity_Features{font-size: 65px;}
+    .mainVisualIdentity_smallText{font-size: 14px;}
+    .outlineCircle-cyan.outlineCircle-middle{position: absolute;bottom: 10%;}
+    .navbar{padding: .5rem 1rem;}
+    .title{margin-bottom: 30px;}
+    .title__text{font-size: 24px;}
+    p,.mainVisualIdentity_selfIntroduction,.list__item{font-size: 14px;}
+
+}

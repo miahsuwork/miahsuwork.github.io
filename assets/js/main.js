@@ -43,11 +43,11 @@ $(document).ready(function () {
     });
     $('#navbar').on('show.bs.collapse', function () {
         document.documentElement.style.overflowY = 'hidden';
-        $(".overlay").fadeIn();
+        $(".overlay").fadeIn("fast");
     })
     $('#navbar').on('hidden.bs.collapse', function () {
         document.documentElement.style.overflowY = 'scroll';
-        $(".overlay").fadeOut   ();
+        $(".overlay").fadeOut("fast");
     })
 
     
@@ -61,16 +61,16 @@ $(document).ready(function () {
         slidesToShow: 3,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 996,
                 settings: {
                     arrows: false,
                     centerMode: true,
-                    centerPadding: '50px',
+                    centerPadding: '180px',
                     slidesToShow: 1
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 768,
                 settings: {
                     arrows: false,
                     centerMode: true,

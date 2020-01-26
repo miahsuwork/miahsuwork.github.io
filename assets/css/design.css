@@ -198,6 +198,9 @@ p{line-height: 1.5; text-align: justify;}
     
 }
 
+.about{
+    justify-content: space-between;
+}
 
 /*
 | container style - dot
@@ -215,6 +218,7 @@ p{line-height: 1.5; text-align: justify;}
     border-radius: 35%;
     border: 1px solid #000;
     position: absolute;
+    z-index: -1;
 }
 .outlineCircle-big{
     width: 68px;
@@ -582,7 +586,7 @@ p{line-height: 1.5; text-align: justify;}
     .nav__item:last-child {margin-right: 0px;}
     .nav__item:first-child {margin-top: 20px;}
     .navbar-collapse .linkBtn{margin-bottom: 30px;}
-
+    .tooltiptext{display: none;}
 
     .mainVisualIdentity_backgroundText{font-size: 250px;}
     .mainVisualIdentity_Name,.mainVisualIdentity_Features{font-size: 80px;}
@@ -602,22 +606,50 @@ p{line-height: 1.5; text-align: justify;}
     .outlineCircle-small{
         width: 20px;
         height: 20px;
-        border-width: 8px;
+        border-width: 6px;
     }
-
+    .about{justify-content: center;}
+    .adoutImg{margin-top: 20px;}
+    .title{margin-bottom: 40px;}
     .title__text::after{display: none;}
     
+
+
+    .projectItem:nth-child(odd) .workImgGroup__link .workImgGroup__img, .projectItem:nth-child(odd) .workImgGroup__link .workImgGroup__frame{
+        right: auto;
+    }
+    .projectItem:nth-child(even) .workImgGroup__link .workImgGroup__img, .projectItem:nth-child(even) .workImgGroup__link .workImgGroup__frame{
+        left: auto;
+    }
+    .workImgGroup__img{
+        margin-top: 20px;
+    }
+
+    .worked__pills .worked__tab.active::before{
+        height: 3px;
+        width: 100%;
+        top: 100%;
+    }
+    .worked .tab-content{
+        margin-top: 20px;
+    }
+    .worked .redCircleGroup{display: none;}
+
+    .animationOuter{display: none;}
 
     .contact .outlineCircle-small{
         right: 0;
     }
+    .contactList__Item{
+        font-size: 1em;
+    }
+
 
 }
 
 
 @media (max-width: 576px) {
     .jobTitle{display: none;}
-    .animationOuter{display: none;}
     .mainVisualIdentity_backgroundText{font-size: 200px;}
     .mainVisualIdentity_Name,.mainVisualIdentity_Features{font-size: 65px;}
     .mainVisualIdentity_smallText{font-size: 14px;}
@@ -626,5 +658,14 @@ p{line-height: 1.5; text-align: justify;}
     .title{margin-bottom: 30px;}
     .title__text{font-size: 24px;}
     p,.mainVisualIdentity_selfIntroduction,.list__item{font-size: 14px;}
+    .projectItem{margin-bottom: 100px;}
+    .workDescriptionGroup__enName{font-size: 14px;}
+    .workDescriptionGroup__name{font-size: 20px;}
+    .projectItem-otherBtn .linkBtn{font-size: 1em;}
 
+}
+
+@media (max-width: 400px) {
+    .mainVisualIdentity_backgroundText{font-size: 150px;}
+    .mainVisualIdentity_Name,.mainVisualIdentity_Features{font-size: 50px;}
 }

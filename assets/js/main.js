@@ -1,4 +1,18 @@
 /*
+| Preloader JS 
+*/
+
+$(window).on('load', function(){
+
+    function removePreloader() {
+        var preLoader = $('.preLoader');
+        preLoader.fadeOut();
+    }
+    setTimeout(removePreloader, 250);
+});
+    
+
+/*
 | When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar 
 */
 var prevScrollpos = window.pageYOffset;

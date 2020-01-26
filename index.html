@@ -10,6 +10,8 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link href="assets/css/bootstrap.min.css" rel="stylesheet">
 
+    <link href="assets/css/preLoader.css" rel="stylesheet">
+
     <link rel="stylesheet" href="assets/css/slick.css" />
     <link rel="stylesheet" href="assets/css/slick-theme.css" />
 
@@ -20,6 +22,23 @@
 </head>
 
 <body onload="init();">
+    <!-- 
+    ================================
+        Preloader
+    ================================ 
+    -->
+    <div class="preLoader">
+        <div class="preload-inner">
+            <div class="spinner spinner03">
+            <div class="rect1"></div>
+            <div class="rect2"></div>
+            <div class="rect3"></div>
+            <div class="rect4"></div>
+            <div class="rect5"></div>
+            </div>
+        </div>
+    </div>
+
     <header>
         <nav id="navbar" class="navbar navbar-expand-md">
             <a class="navbar-brand" href="#">
@@ -123,7 +142,7 @@
             </div>
 
 
-            <div id="about" class="row justify-content-between section about">
+            <div id="about" class="row section about">
                 <div class="outlineCircle outlineCircle-cyan outlineCircle-small"></div>
                 <div class="col-12">
                     <h4 class="title">
@@ -147,7 +166,7 @@
                         <li class="skillList__item list__item">Adobe Animate </li>
                     </ul>
                 </div>
-                <div class="col-md-4 col-lg-3">
+                <div class="col-10 col-sm-8 col-md-4 col-lg-3 adoutImg">
                     <img src="https://avatars2.githubusercontent.com/u/50665086?s=460&v=4" alt="" class="w-100">
                 </div>
                 <div class="outlineCircle outlineCircle-green outlineCircle-big"></div>
@@ -165,14 +184,14 @@
                     </h4>
                     <div class="row">
                         <div class="col-12 col-md-3">
-                            <div class="nav flex-column nav-pills worked__pills" id="v-pills-tab" role="tablist"
+                            <div class="nav nav-pills worked__pills" id="v-pills-tab" role="tablist"
                                 aria-orientation="vertical">
                                 <a class="nav-link active  worked__tab" id="v-pills-home-tab" data-toggle="pill"
                                     href="#v-pills-home" role="tab" aria-controls="v-pills-home"
                                     aria-selected="true">TrendForce</a>
-                                <a class="nav-link worked__tab" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+                                <!-- <a class="nav-link worked__tab" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
                                 <a class="nav-link worked__tab" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-                                <a class="nav-link worked__tab" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>
+                                <a class="nav-link worked__tab" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a> -->
                             </div>
                         </div>
                         <div class="col-12 col-md-9">
@@ -201,7 +220,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                
             </div>
 
             <div id="projects" class="row section projects">
@@ -218,7 +237,7 @@
                             <span class="workDescriptionGroup__enName">Member system</span>
                             <h5 class="workDescriptionGroup__name">會員系統</h5>
                         </div>
-                        <div class="col-6 workDescriptionGroup">
+                        <div class="col-md-6 workDescriptionGroup">
                             <div class="workDescriptionGroup__textArea">
                                 <p class="workDescriptionGroup__text">為內容型網站導入會員系統，UI/ UX 與前端切版獨立完成，並與後端 PHP
                                     工程師合作開發前後台會員系統加以整合原有電子報功能，並與 Google 、 FaceBook 第三方註冊與登入功能。<a class="#">...了解更多</a>
@@ -236,7 +255,7 @@
                                 <li class="toolGroup__item">jQuery</li>
                             </ul>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <div class="workImgGroup">
                                 <a class="workImgGroup__link" href="#">
                                     <div class="workImgGroup__frame"></div>
@@ -266,7 +285,7 @@
                             <span class="workDescriptionGroup__enName">Company Website</span>
                             <h5 class="workDescriptionGroup__name">企業形象官網</h5>
                         </div>
-                        <div class="col-6 workDescriptionGroup">
+                        <div class="col-md-6 workDescriptionGroup">
 
                             <div class="workDescriptionGroup__textArea">
                                 <p class="workDescriptionGroup__text">為 B2B 三語系企業形象官網，用戶提出以 WordPress
@@ -284,7 +303,7 @@
                                 <li class="toolGroup__item">SVG</li>
                             </ul>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <div class="workImgGroup">
                                 <a class="workImgGroup__link" href="#">
                                     <div class="workImgGroup__frame"></div>
@@ -377,7 +396,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-7">
+                        <div class="col-md-7">
                             <ul class="contactList">
                                 <li class="contactList__Item">
                                     <a class="nav-link" href="mailto:miahsuwork@gmail.com" title="medium"
@@ -406,7 +425,7 @@
 
             </div>
 
-
+            
 
         </div>
     </main>

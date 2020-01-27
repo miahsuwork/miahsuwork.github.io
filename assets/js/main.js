@@ -2,7 +2,7 @@
 | Preloader JS 
 */
 
-$(window).on('load', function(){
+$(window).on('load', function () {
 
     function removePreloader() {
         var preLoader = $('.preLoader');
@@ -10,7 +10,7 @@ $(window).on('load', function(){
     }
     setTimeout(removePreloader, 250);
 });
-    
+
 
 /*
 | When the user scrolls down, hide the navbar. When the user scrolls up, show the navbar 
@@ -52,7 +52,7 @@ $(document).ready(function () {
     $('.navbar-nav a').on('click', function () {
         $('.navbar-collapse').collapse('hide');
     });
-    $(document).click(function() {
+    $(document).click(function () {
         $('.navbar-collapse').collapse('hide');
     });
     $('#navbar').on('show.bs.collapse', function () {
@@ -63,6 +63,10 @@ $(document).ready(function () {
         document.documentElement.style.overflowY = 'scroll';
         $(".overlay").fadeOut("fast");
     })
+
+    /*
+    | works page
+    */
 
     
 

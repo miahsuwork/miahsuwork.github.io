@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+	<title>blockadblock_part1</title>
+	<style>
+body{
+	margin: 0;
+	background: url("assets/images/body_bg.png") top left no-repeat;
+	background-size: cover;
+}
+a{
+	text-decoration: none;
+}
+.styleBtn,.blockAdblockInnerArea{
+	font-family: 微軟正黑體;
+}
+/* The Modal (background) */
+.modal {
+	/*display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 7; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.6); /* Black w/ opacity */
+}
+.blockAdblock{
+	position: absolute; 
+	width: 700px; 
+	display: block;
+	left: 50%;
+	top: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	overflow: visible;
+	background-color: transparent;
+}
+.blockAdblockInner{
+	position: relative;
+}
+.blockAdblock_2{
+	left: auto;
+	right: 10px;
+	top: 10px;
+	transform: none;
+	background-color: #1E1E1E;
+	width: 950px;
+	color: #fff;
+}
+.blockAdblock_2 .blockAdblockInner{
+	display: flex;
+}
+.blockAdblock .blockAdblockImg01{
+	width: 100%;
+}
+.blockAdblockInnerArea{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items:stretch;
+	-ms-flex-align:stretch;
+	position: relative;
+	width: 100%;
+}
+.blockAdblockInnerArea .title{
+	font-size: 1.2rem;
+	background-color: #ae0b17;
+	position: absolute;
+	width: 100%;
+}
+.blockAdblockInnerArea .title p{
+	margin: 0px;
+	padding: 10px 15px;
+}
+.blockAdblockInnerArea .choiceAdblock,.blockAdblockInnerArea .stopDescription{
+	padding-top: 50px
+}
+.blockAdblockInnerArea .choiceAdblock{
+	width: 40%;
+}
+.blockAdblockInnerArea .stopDescription{
+	width: 60%;
+	display: none;
+	opacity: 0;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+}
+.blockAdblockInnerArea .active{
+	background-color: #393838;
+	display: block;
+	opacity: 1;
+}
+.blockAdblockInnerArea .nextBtn{
+	position: absolute;
+	right: 0px;
+	bottom: 0px;
+}
+.blockAdblock .styleBtn{
+	color: #fff;
+	background-color: #BC0C19;
+	margin: auto;
+	font-size: 1.2rem;
+	padding: 0.4rem 0.75rem;
+	border: 0px;
+	border-radius: 2px;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+	cursor: pointer;
+
+}
+.BtnIcon{
+	width: 20px;
+	position: relative;
+	top: 4px;
+	margin-left: 3px;
+}
+.blockAdblock .styleBtn:hover{
+	background-color: #ae0b17;
+}
+.blockAdblockInnerArea .sumBtn{
+	font-size: 1rem;
+	background-color: transparent;
+	border: 1px solid #fff;
+	position: absolute;
+	bottom: 12px;
+	margin-left: 30px;
+}
+.blockAdblockInnerArea .sumBtn:hover .BtnIcon{
+	left: 3px;
+}
+.adblockItem,.adblockStop,.adblockStopTitle,.adblockItemTitle{
+	margin: 0px;
+	padding: 10px 15px;
+}
+.adblockItem{
+	cursor: pointer;
+}
+.adblockItem:hover{
+	background-color: #393838;
+}
+
+	</style>
+</head>
+
+<body>
+    <div id="" class="modal">
+        <div id="" class="blockAdblock">
+			<div class="blockAdblockInner">
+				<img src="assets/images/blockAdblockImg.png" class="blockAdblockImg01" alt="">
+				<a href="popup_blockadblock_part2.html">
+				<button class="nextBtn styleBtn">如何暫停 <img src="assets/images/nextBtnImg.png" class="BtnIcon" alt=""></button>
+			</a>			</div>
+		</div>
+    </div>
+	<script type="text/javascript" src="assets/js/js_75505f87561bf1870089b446c015ace5.js_ET.js"></script>
+	<script>	
+	</script>
+
+</body>
+</html>

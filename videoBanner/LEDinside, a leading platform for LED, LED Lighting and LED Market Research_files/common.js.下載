@@ -1,0 +1,147 @@
+// JavaScript Document
+$(document).ready(function(){
+	$("#header_search").find("li").each(function() {
+		if ($(this).attr("class") == "tag" || $(this).attr("class") == "tag selecttag") {
+			$(this).click(function() {
+				$("#header_search").find("li[class=tag selecttag]").removeClass("selecttag");
+				if ($(this).attr("class") == "tag") {
+					$(this).addClass("selecttag");
+				}
+			});		   
+		}
+	});
+	
+	$(".search_wrapper").find("li").each(function() {
+		if ($(this).attr("class") == "tag" || $(this).attr("class") == "tag actived") {
+			$(this).click(function() {
+				$(".search_wrapper").find("li[class=tag actived]").removeClass("actived");
+				if ($(this).attr("class") == "tag") {
+					$(this).addClass("actived");
+				}
+			});		   
+		}
+	});
+	
+	$("#primarylinks").find("li").each(function() {
+		$(this).mouseover(function() {
+			selfid = $(this).attr("id");
+			$("#secondarylinks").find("li").each(function() {
+				if ($(this).attr("parentid") == selfid) {
+					$(this).show();
+				} else {
+					$(this).hide();
+				}
+			});
+		});
+	});
+	
+	$("#latestnews-pricequote .menu").find("div").each(function() {
+		$(this).mouseover(function() {
+			name = $(this).attr("name");
+			$("#latestnews-pricequote .menu").find("div").each(function() {
+				if ($(this).attr("name") == name) {
+					$(this).addClass("active");
+				} else {
+					$(this).removeClass("active");
+				}
+			});
+			$("#latestnews-pricequote .content").find("div").each(function() {
+				if ($(this).attr("id") == name) {
+					$(this).show();
+				} else {
+					$(this).hide();
+				}
+			});
+		});
+	});
+	
+		$("#bidding-tag .menu").find("div").each(function() {
+		$(this).mouseover(function() {
+			name = $(this).attr("name");
+			$("#bidding-tag .menu").find("div").each(function() {
+				if ($(this).attr("name") == name) {
+					$(this).addClass("active");
+				} else {
+					$(this).removeClass("active");
+				}
+			});
+			$("#bidding-tag .content").find("div").each(function() {
+				if ($(this).attr("id") == name) {
+					$(this).show();
+				} else {
+					$(this).hide();
+				}
+			});
+		});
+	});
+	
+	$("#sidebar-stock .menu").find("span").each(function() {
+		$(this).mouseover(function() {
+			$("#sidebar-stock .menu").find("span").each(function() {
+				$(this).removeClass("hover");
+			});
+			$(this).addClass("hover");
+		});
+		$(this).mouseout(function() {
+			$(this).removeClass("hover");
+		});
+		$(this).click(function() {
+			$("#sidebar-stock .menu").find("span").each(function() {
+				$(this).removeClass("active");
+			});
+			$(this).addClass("active");
+			$("#sidebar-stock .stockblock").find("div").each(function() {
+				$(this).hide();
+			});
+			name = "block-" + $(this).html();
+			
+			$("#" + name).show();
+			
+		});
+	});
+	
+	setautomarket();
+	
+	$("#sidebar-stock").mouseover(function() {
+		setclearauto();
+	});
+	$("#sidebar-stock").mouseout(function() {
+		setautomarket();
+	});
+	
+});
+
+var autospeed = 3000;
+var auto = "";
+function setautomarket() {
+	auto = setInterval("automarket()",autospeed);
+}
+
+function setclearauto(){
+	clearInterval(auto);
+}
+
+function automarket() {
+	var index = 0;
+	var nexti = 0;
+	$("#sidebar-stock .menu").find("span").each(function(x) {
+		if ($(this).attr("class") == "active") {
+			index = x;
+		}
+	});
+	if (index + 1 == $("#sidebar-stock .menu").find("span").length) {
+		nexti = 0;
+	} else {
+		nexti = index + 1;
+	}
+	$("#sidebar-stock .menu").find("span").eq(index).removeClass("active");
+	$("#sidebar-stock .menu").find("span").eq(nexti).addClass("active");
+	name = "block-" + $("#sidebar-stock .menu").find("span").eq(nexti).text();
+	$("#sidebar-stock .stockblock").find("div").each(function() {
+		if ($(this).attr("id") == name) {
+			$(this).show();
+		} else {
+			$(this).hide();
+		}
+	});
+}

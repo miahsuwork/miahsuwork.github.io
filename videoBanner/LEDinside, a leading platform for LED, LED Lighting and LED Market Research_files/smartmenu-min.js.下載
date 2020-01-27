@@ -1,0 +1,144 @@
+(function ($) {
+    $.fn.Floaty = function (a) {
+        var b = buildFloaty();
+        b.show = show;
+        b.hideIn = hideIn;
+        b.cancelHiding = cancelHiding;
+        b.willHideSoon = willHideSoon;
+        b.options = $.extend(true, {
+            startPosition: {
+                left: 0,
+                top: 0
+            },
+            animationDuration: 300,
+            hideIn: 1000,
+            floaty: b,
+            timerHandle: null,
+            appearingFirstTime: true
+        }, a);
+        b.mouseenter(function (e) {
+            b.cancelHiding()
+        });
+        b.mouseleave(function (e) {
+            b.hideIn(b.options.hideIn)
+        });
+        return b
+    };
+
+    function isIE6() {
+        //return ($.browser.msie && $.browser.version == "6.0")
+    };
+
+    function buildFloaty() {
+        var a = jQuery(document.createElement("div")).addClass("smartmenufloaty");
+        var b = jQuery(document.createElement("div")).addClass((isIE6()) ? "tip tipIE6" : "tip");
+        var c = jQuery(document.createElement("div")).addClass((isIE6()) ? "padder padderIE6" : "padder");
+        a.hide();
+        a.append(b);
+        a.append(c);
+        jQuery("body").append(a);
+        return a
+    };
+
+    function willHideSoon() {
+        return (this.options.timerHandle != null)
+    };
+
+    function cancelHiding() {
+        window.clearInterval(this.options.timerHandle);
+        this.options.timerHandle = null
+    };
+
+    function show(a) {
+        if (this.options.appearingFirstTime) {
+            this.options.appearingFirstTime = false;
+            this.css({
+                "left": this.options.startPosition.left + "px",
+                "top": this.options.startPosition.top + "px"
+            })
+        }
+        this.fadeIn(this.options.animationDuration);
+        this.animate({
+            "top": a.top + "px",
+            "left": a.left + "px"
+        }, {
+            queue: false,
+            duration: this.options.animationDuration
+        });
+        if (this.willHideSoon()) this.cancelHiding()
+    };
+
+    function hideIn(a) {
+        var b = this;
+        this.options.timerHandle = window.setTimeout(function () {
+            b.fadeOut(b.options.animationDuration)
+        }, a)
+    }
+})(jQuery);
+(function ($) {
+    $.fn.Smartmenu = function (b) {
+        var c = $.extend(true, {
+            hideSubmenuIn: 100,
+            pushSubmenuDownBy: 30,
+            animationDuration: 100
+        }, b);
+        c.floaty = jQuery("").Floaty({
+            animationDuration: c.animationDuration,
+            startPosition: jQuery(this).position()
+        });
+        c.padder = c.floaty.find((isIE6()) ? ".padderIE6" : ".padder");
+        return this.each(function () {
+            var a = {
+                options: c,
+                target: jQuery(this)
+            };
+            initialize(a)
+        })
+    };
+
+    function isIE6() {
+        //return ($.browser.msie && $.browser.version == "6.0")
+    };
+
+    function initialize(a) {
+        var b = a.target;
+        var c = b.find("ul:first");
+        var d = c.children();
+        b.addClass((isIE6()) ? "smartmenuie6" : "");
+        d.find("a:first").bind("mouseenter", a, topMenuEnter);
+        d.find("a:first").bind("mouseleave", a, topMenuLeave);
+        if (d.length > 0) {
+            jQuery(d[d.length - 1]).find("a:first").addClass("last")
+        }
+    };
+
+    function topMenuLeave(e) {
+        var a = jQuery(e.target);
+        var b = e.data;
+        var c = (a.parent().find("ul").length > 0) ? true : false;
+        if (b.options.floaty && c) b.options.floaty.hideIn(b.options.hideSubmenuIn)
+    };
+
+    function topMenuEnter(e) {
+        var b = jQuery(e.target);
+
+        function getChildList() {
+            var a = b.parent().find("ul").clone(true);
+            a.find("li:last").addClass("last");
+            return a
+        }
+        var c = e.data;
+        var d = getChildList();
+        if (d.length == 0) return;
+        var f = b.position();
+        var g = parseInt(f.left);
+        var h = parseInt(f.top);
+        var i = parseInt(b.css("padding-left"));
+        c.options.padder.empty();
+        c.options.padder.append(d);
+        c.options.floaty.show({
+            top: h + c.options.pushSubmenuDownBy,
+            left: g + i
+        })
+    }
+})(jQuery);

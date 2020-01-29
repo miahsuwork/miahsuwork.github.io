@@ -194,3 +194,31 @@ a:hover {
         color: #0EC7A1;
     }
 }
+
+
+/*
+| works page
+*/
+.gallery-wrapper a.gallery-item {
+    background-color: #FBFBFB;
+}
+.tags span{
+    color: #f1f1f1;
+    background-color: #2e2e2e;
+}
+.tags span.tag-green{
+    background-color: #0EC7A1;
+}
+.gallery-wrapper a.gallery-item .card-title {
+    color: #383e49;
+}
+.gallery-item:hover .tooltiptext {
+    color: #D8F1FF;
+}
+.gallery-item .tooltiptext {
+    color: #D8F1FF;
+}
+.gallery-item .tooltiptext{background-color: rgba(0,0,0,.9);}
+.gallery-item .tooltiptext::before{
+    border-color: rgba(0,0,0,.8) transparent transparent transparent;
+}

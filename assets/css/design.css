@@ -952,7 +952,6 @@ p {
 }
 .gallery-wrapper a.gallery-item {
     padding: 10px;
-    background-color: #FBFBFB;
     border-radius: 0;
 }
 
@@ -972,17 +971,11 @@ p {
 }
 .tags span{
     border-radius: .2em;
-    color: #f1f1f1;
     line-height: 1.5;
     padding: 5px 8px;
     font-size: 8px;
-    background-color: #2e2e2e;
-}
-.tags span.tag-green{
-    background-color: #0EC7A1;
 }
 .gallery-wrapper a.gallery-item .card-title {
-    color: #383e49;
     font-size: 16px;
     font-weight: 800;
     margin-top: 10px;
@@ -1006,7 +999,6 @@ p {
 
 .gallery-item:hover .tooltiptext {
     opacity: 1;
-    color: #D8F1FF;
 }
 .gallery-item .tooltiptext {
     width: 100%;
@@ -1014,18 +1006,15 @@ p {
     transform: translateX(-50%);
     bottom: calc(100% + 10px);
     line-height: 1.5;
-    color: #D8F1FF;
     padding: 10px 5px;
     z-index: -1;
 }
-.gallery-item .tooltiptext{background-color: rgba(0,0,0,.9);}
 .gallery-item .tooltiptext::before{
     top: auto;
     bottom: -7.5px;
     left: 50%;
     transform: translateX(-50%);
     border-width: 7.5px 7.5px 0 7.5px;
-    border-color: rgba(0,0,0,.8) transparent transparent transparent;
 
 }
 .gallery-wrapper a.gallery-item {

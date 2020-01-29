@@ -68,6 +68,19 @@ $(document).ready(function () {
     | works page
     */
 
+   $('#front-end').on('show.bs.collapse', function () {
+        $(".front-end-title svg").removeClass("collapseClose");
+    })
+    $('#front-end').on('hidden.bs.collapse', function () {
+        $(".front-end-title svg").addClass("collapseClose");
+    })
+    $('#graphic').on('show.bs.collapse', function () {
+        $(".graphic-title svg").addClass("collapseOpen");
+    })
+    $('#graphic').on('hidden.bs.collapse', function () {
+        $(".graphic-title svg").removeClass("collapseOpen");
+    })
+
     
 
     $('.carousel').slick({

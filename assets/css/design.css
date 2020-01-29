@@ -923,10 +923,29 @@ p {
 | works page
 */
 
+.collapseClose{
+    transform: rotate(-90deg);
+}
+.collapseOpen{
+    transform: rotate(90deg);
+}
+.works_titleOutder{
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.works_titleOutder .title{
+    margin-bottom: 20px;
+}
+.works_titleOutder .skillList{
+    margin-bottom: 0px;
+}   
 .works .title__text::after {
     content: none;
 }
-
+.works .title__text svg {
+    margin-left: 15px;
+    transition: all ease-in .2s;
+}
 .gallery-wrapper{
     padding-right: 15px;
     padding-left: 15px;

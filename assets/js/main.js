@@ -64,6 +64,12 @@ $(document).ready(function () {
         $(".overlay").fadeOut("fast");
     })
 
+    $('#myList a').on('click', function (event) {
+        console.log(123)
+        event.preventDefault()
+        $(this).tab('show')
+    })
+
     /*
     | works page
     */

@@ -145,18 +145,18 @@
                     </h4>
                 </div>
                 <div class="col-md-8 col-lg-6">
-                    <p>嗨！我是 Mia，原任職於服務業的我一直希望能將興趣結合於工作，因此在 2017 年 10 月參與恆逸的「互動式網站與 Mobile App 設計師養成班」，在結業後的一個月內順利轉職網頁設計師，在工作上時刻保持虛心的學習心態與誠懇的態度，認真完成工作上目標。工作之餘也持續進修前端技能的部分，自學 jQuery、JavaScript、SVG 動畫及 SASS 朝向前端工程師的方向前進。
+                    <p>嗨！我是 Mia，在網頁設計師工作中發現 Coding 的樂趣，因此工作之餘也開始進修前端技能的部分，自學 Angular、tailwind、JavaScript、SVG 動畫及 SASS 等前端技能，學習的過程中碰到許多新挑戰但總提醒自己必須保持成長型思維，將失敗視為一種挑戰而不是挫折，才會增加進步的可能，因此有了大幅的成長，除了前端三大框架皆可實際開發專案外，也更了解專案進行的流程以及如何跟 SA、SD 進行溝通，我會時刻保持虛心的學習心態與誠懇的態度，繼續深入學習前端技術了解原理運用至工作中，並成為與時俱進的工程師。
                     </p>
                     <p>以下是我最近使用的一些技術：</p>
                     <ul class="skillList list">
+                        <li class="skillList__item list__item">Angular</li>
+                        <li class="skillList__item list__item">Tailwind</li>
+                        <li class="skillList__item list__item">Vue</li>
+                        <li class="skillList__item list__item">RxJS</li>
                         <li class="skillList__item list__item">JavaScript</li>
                         <li class="skillList__item list__item">HTML5 & (S)ASS</li>
                         <li class="skillList__item list__item">jQuery</li>
                         <li class="skillList__item list__item">SVG Animate</li>
-                        <li class="skillList__item list__item">Adobe XD</li>
-                        <li class="skillList__item list__item">Illustrator</li>
-                        <li class="skillList__item list__item">Photoshop</li>
-                        <li class="skillList__item list__item">Adobe Animate </li>
                     </ul>
                 </div>
                 <div class="col-10 col-sm-8 col-md-4 col-lg-3 adoutImg">
@@ -175,21 +175,34 @@
                         <span class="title__num">02</span>
                         <span class="title__text">Where I've Worked</span>
                     </h4>
-                    <div class="row">
+                    <div role="tabpanel">
+                    <div class="row" role="tabpanel">
                         <div class="col-12 col-md-3">
-                            <div class="nav nav-pills worked__pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                                <a class="nav-link active worked__tab" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">TrendForce</a>
-                                <!-- <a class="nav-link worked__tab" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
-                                <a class="nav-link worked__tab" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
-                                <a class="nav-link worked__tab" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a> -->
+                            <div class="nav nav-pills worked__pills" id="myList" role="tablist" aria-orientation="v-pills-tabContent">
+                                <a class="nav-link active worked__tab" id="v-pills-home-tab" data-toggle="list" href="#v-pills-home" role="tab" aria-controls="v-pills-home" aria-selected="true">TPISoftware</a>
+                                <a class="nav-link worked__tab" id="v-pills-profile-tab" data-toggle="list" href="#v-pills-profile" role="tab" aria-controls="v-pills-profile" aria-selected="false">TrendForce</a>
+                                <!-- <a class="nav-link worked__tab" id="v-pills-messages-tab" data-toggle="list" href="#v-pills-messages" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+                                <a class="nav-link worked__tab" id="v-pills-settings-tab" data-toggle="list" href="#v-pills-settings" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a> -->
                             </div>
                         </div>
                         <div class="col-12 col-md-9">
-
-                            <div class="tab-content" id="v-pills-tabContent">
+                            <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                                    <p class="worked__title">前端工程師 <a href="https://www.tpisoftware.com/" target="_blank">@ TPISoftware</a></p>
+                                    <small class="worked__time">Feb 2020 - Present</small class="worked__title">
+                                    <ul class="list">
+                                        <li class="list__item">網站、行動裝置、 MobileWeb 前端程式撰寫（Angular、Vue）</li>
+                                        <li class="list__item">協助維護 Hybrid app 網銀專案</li>
+                                        <li class="list__item">與 BackEnd 討論 API 規格並進行串接、UT 測試</li>
+                                        <li class="list__item">協助評估前端功能實作可行性，產出系統分析文件、系統操作手冊</li>
+                                        <li class="list__item">協助 UI/UX 在介面設計過程中，評估元件共用性、實作可行性及維護性</li>
+                                        <li class="list__item">建立切版模板並定義規範統一產出品質</li>
+                                    </ul>
+
+                                </div>
+                                 <div class="tab-pane" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
                                     <p class="worked__title">網頁設計師 <a href="https://www.trendforce.com.tw/" target="_blank">@ TrendForce</a></p>
-                                    <small class="worked__time">Feb 2018 - Present</small class="worked__title">
+                                    <small class="worked__time">Feb 2018 - Mar 2020</small class="worked__title">
                                     <ul class="list">
                                         <li class="list__item">與後端協作開發與維護系統</li>
                                         <li class="list__item">實體/ 線上研討會 RWD 網站建置</li>
@@ -202,13 +215,18 @@
 
                             </div>
 
+
+                                <!-- <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
+                                <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
+                                <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div> -->
+        
                                 <!-- <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">...</div>
                                 <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">...</div>
                                 <div class="tab-pane fade" id="v-pills-settings" role="tabpanel" aria-labelledby="v-pills-settings-tab">...</div> -->
                             </div>
                         </div>
                     </div>
-                
+                    </div>
             </div>
 
             <div id="projects" class="row section projects">
@@ -222,32 +240,34 @@
                 <div class="col-12 projectItem">
                     <div class="row justify-content-between">
                         <div class="col-12">
-                            <span class="workDescriptionGroup__enName">Member system</span>
-                            <h5 class="workDescriptionGroup__name">會員系統</h5>
+                            <span class="workDescriptionGroup__enName">Mobile Web</span>
+                            <h5 class="workDescriptionGroup__name">行動網銀</h5>
                         </div>
                         <div class="col-md-6 workDescriptionGroup">
                             <div class="workDescriptionGroup__textArea">
-                                <p class="workDescriptionGroup__text">為內容型網站導入會員系統，UI/ UX 與前端切版獨立完成，並與後端 PHP
-                                    工程師合作開發前後台會員系統加以整合原有電子報功能，並與 Google 、 FaceBook 第三方註冊與登入功能。<!--a class="#">...了解更多</a-->
+                                <p class="workDescriptionGroup__text">提供更多元化的功能：登入前快速預覽帳務管理、即時交易資訊推播服務。
+                                    <ul class="pl-3">
+                                        <li>與 App 工程師協作進行 CR 開發與測試</li>
+                                        <li>協助雙平台 APP 上架發布</li>
+                                    </ul>
                                 </p>
-                                <div class="webLinkOuter"><a class="webLink" href="https://member.technews.tw/login"
+                                <div class="webLinkOuter"><a class="webLink" href="https://ebank.standardchartered.com.tw/scb/public/login?lang=tw"
                                         target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
 
                             </div>
 
                             <ul class="nav toolGroup">
-                                <li class="toolGroup__item">Wireframe</li>
-                                <li class="toolGroup__item">Function map</li>
-                                <li class="toolGroup__item">SASS</li>
-                                <li class="toolGroup__item">Bootstrap</li>
-                                <li class="toolGroup__item">jQuery</li>
+                                <li class="toolGroup__item">Hybrid app</li>
+                                <li class="toolGroup__item">Cordova</li>
+                                <li class="toolGroup__item">Vue2.js</li>
+                                <li class="toolGroup__item">App debug</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <div class="workImgGroup">
                                 <a class="workImgGroup__link" href="https://member.technews.tw/login" target="_blank">
                                     <div class="workImgGroup__frame"></div>
-                                    <div class="workImgGroup__img"><img class="" src="assets/images/web01.jpg" alt="">
+                                    <div class="workImgGroup__img"><img class="" src="assets/images/works/tpi01.webp" alt="">
                                     </div>
 
                                     <div class="dots-line">
@@ -270,32 +290,37 @@
                 <div class="col-12 projectItem">
                     <div class="row justify-content-between flex-lg-row-reverse">
                         <div class="col-12">
-                            <span class="workDescriptionGroup__enName">Company Website</span>
-                            <h5 class="workDescriptionGroup__name">企業形象官網</h5>
+                            <span class="workDescriptionGroup__enName">Company System</span>
+                            <h5 class="workDescriptionGroup__name">內部績效管理系統</h5>
                         </div>
                         <div class="col-md-6 workDescriptionGroup">
 
                             <div class="workDescriptionGroup__textArea">
-                                <p class="workDescriptionGroup__text">為 B2B 三語系企業形象官網，用戶提出以 WordPress
-                                    做為基底的需求並加以客製化，包含所有圖像及 Canvas 動畫，在製作的過程當中遇到問題模板上的問題也能迅速與國外模板商進行溝通排除。<!--a
-                                        class="#">...了解更多</a--></p>
+                                <p class="workDescriptionGroup__text">為國泰所有子公司統一使用之大型內部系統
+                                    <ul class="pl-3">
+                                        <li>與 UI/UX 共同討論設計出 7 種以上複雜表格來符合使用者需求</li>
+                                        <li>與前端工程師協作配合前端框架(Vue)產出客製化 UI 組件</li>
+                                        <li>定義 Sass 元件規範方便工程師開發</li>
+                                        <li>使用 jQuery 完成大部分使用者操作體驗</li>
+                                    </ul>
+                                </p>
                                 <div class="webLinkOuter"><a class="webLink" href="https://www.prophetcomputing.com/"
                                         target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
                             </div>
 
-                            <ul class="nav toolGroup">
-                                <li class="toolGroup__item">WordPress</li>
-                                <li class="toolGroup__item">CSS</li>
-                                <li class="toolGroup__item">Canvas Animation</li>
+                             <ul class="nav toolGroup">
+                                <li class="toolGroup__item">Vue2</li>
+                                <li class="toolGroup__item">SASS</li>
+                                <li class="toolGroup__item">Bootstrap4.6</li>
+                                <li class="toolGroup__item">JavaScript</li>
                                 <li class="toolGroup__item">jQuery</li>
-                                <li class="toolGroup__item">SVG</li>
                             </ul>
                         </div>
                         <div class="col-md-6">
                             <div class="workImgGroup">
                                 <a class="workImgGroup__link" href="https://www.prophetcomputing.com/" target="_blank">
                                     <div class="workImgGroup__frame"></div>
-                                    <div class="workImgGroup__img"><img class="" src="assets/images/web02.jpg" alt="">
+                                    <div class="workImgGroup__img"><img class="" src="assets/images/works/tpi03.webp" alt="">
                                     </div>
 
                                     <div class="dots-line">
@@ -329,7 +354,6 @@
                                 <li class="toolGroup__item">Bootstrap</li>
                                 <li class="toolGroup__item">JavaScript</li>
                                 <li class="toolGroup__item">jQuery</li>
-                                <li class="toolGroup__item">SVG Animation</li>
                             </ul>
                         </div>
                         <div class="col-11">
@@ -419,25 +443,22 @@
     </main>
 
 
-    <footer class="footer text-center"><small>COPYRIGHT (C) 2020 MIA</small></footer>
+    <footer class="footer text-center"><small>COPYRIGHT (C) 2023 MIA</small></footer>
 
 
+    <script src="assets/js/jquery-3.4.1.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/fontawesome-5.12.0l.min.js"></script>
+    <!-- carousel -->
+    <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.min.js"></script>
+    <!-- scrolling nav -->
+    <script type="text/javascript" src="assets/js/scrolling-nav.js"></script>
+    <!-- contact canvas -->
+    <script src="assets/animate/graphic.js"></script>
 
-
-
-                                    <script src="assets/js/jquery-3.4.1.min.js"></script>
-                                    <!-- Compiled and minified JavaScript -->
-                                    <script src="assets/js/bootstrap.min.js"></script>
-                                    <script src="assets/js/fontawesome-5.12.0l.min.js"></script>
-                                    <!-- carousel -->
-                                    <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-                                    <script type="text/javascript" src="assets/js/slick.min.js"></script>
-                                    <!-- scrolling nav -->
-                                    <script type="text/javascript" src="assets/js/scrolling-nav.js"></script>
-                                    <!-- contact canvas -->
-                                    <script src="assets/animate/graphic.js"></script>
-
-                                    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
 
 
 </body>

@@ -8,6 +8,7 @@ $(document).ready(function () {
 
     //smoothscroll
     $('a[href^="#"]').on('click', function (e) {
+        if ($(this).parent().attr('id') === 'myList') return
         e.preventDefault();
         $(document).off("scroll");
 

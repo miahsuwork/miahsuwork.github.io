@@ -1,0 +1,119 @@
+.page-title {
+  @apply text-2xl mt-20;
+}
+
+.section {
+  margin-bottom: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.section__title {
+  position: relative;
+  margin-bottom: 60px;
+  width: 100%;
+}
+
+.section__title-num {
+  color: theme('colors.sky.600');
+  font-size: 14px;
+  font-weight: 400;
+  position: absolute;
+  top: -10px;
+}
+
+.section__title-num::after {
+  content: '';
+  background-color: theme('colors.sky.600');
+  display: inline-block;
+  width: 16px;
+  height: 1px;
+  transform: rotate(305deg);
+  position: absolute;
+  left: 150%;
+  top: 100%;
+}
+
+.section__title-text {
+  font-size: 36px;
+  font-weight: 300;
+  padding-left: 50px;
+  position: relative;
+}
+
+.section__title-text::after {
+  content: '';
+  width: 200px;
+  height: 1px;
+  display: inline-block;
+  top: 50%;
+  transform: translateY(-50%);
+  position: absolute;
+  margin-left: 15px;
+  background-color: theme('colors.black.500');
+}
+
+.list__item {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+
+.list__item::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  display: inline-block;
+  background-color: theme('colors.sky.600');
+  border-radius: 1px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%) rotate(40deg);
+}
+
+.list__item--outline::before {
+  border: 1px solid theme('colors.sky.600');
+  background-color: #fff;
+}
+
+.list__item--yellow::before {
+  background-color: theme('colors.yellow.400');
+}
+
+.list__item--outline.list__item--colorful:nth-child(odd)::before {
+  border: 1px solid theme('colors.yellow.400');
+}
+
+.btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: theme('colors.sky.600');
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: theme('colors.sky.700');
+}
+
+.btn--outline {
+  background-color: #fff;
+  border: 1px solid theme('colors.sky.600');
+  color: theme('colors.sky.600');
+}
+
+.btn--outline:hover {
+  background-color: theme('colors.sky.600');
+  color: #fff;
+}
+
+/* .growth_circle-orbit-line {
+  fill: none;
+  stroke: theme('colors.gray.200');
+  stroke-width: 1;
+} */

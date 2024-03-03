@@ -1,0 +1,69 @@
+.works__header {
+  @apply w-full lg:mt-[20px] lg:w-[70%];
+}
+
+.works__decorate {
+  @apply flex flex-wrap justify-end w-full relative;
+}
+
+.works__decorate-rect {
+  position: absolute;
+  left: -40px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffb800;
+}
+
+.works__decorate-line {
+  @apply bg-black-300;
+}
+
+.works__desc {
+  @apply w-full text-gray-800 mb-9;
+}
+
+.works__list {
+  @apply lg:pt-[120px];
+}
+
+.seminar {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+  touch-action: pan-y;
+  @apply lg:w-[600px] w-full lg:h-[350px] h-auto;
+}
+.seminar .swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  transition-property: transform;
+  box-sizing: content-box;
+  transform: translate3d(0px, 0, 0);
+  transform-style: preserve-3d;
+}
+.seminar__item {
+  @apply rounded-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #ffffff;
+  transform-style: preserve-3d;
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  display: block;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
+}

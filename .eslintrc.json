@@ -1,0 +1,15 @@
+{
+  "extends": ["next/core-web-vitals", "plugin:@typescript-eslint/recommended", "prettier"],
+  "rules": {
+    "space-before-function-paren": "off",
+    "no-unused-vars": "off",
+    "import/no-anonymous-default-export": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "jsx-quotes": ["warn", "prefer-single"],
+    "@typescript-eslint/no-explicit-any": ["error"],
+    "no-console": "warn"
+  },
+  "globals": {
+    "JSX": true
+  }
+}

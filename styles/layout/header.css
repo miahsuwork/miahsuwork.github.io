@@ -1,0 +1,139 @@
+.header {
+  @apply z-40 relative;
+}
+
+.header__inner {
+  @apply flex h-header items-center justify-between w-full;
+}
+
+.navbar {
+  @apply flex justify-center items-center fixed top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 w-full h-full;
+}
+
+.navbar__bg {
+  @apply w-full h-full absolute;
+}
+
+.navbar__bg-top {
+  @apply w-full h-full;
+}
+
+.navbar__bg-bottom {
+  @apply transition duration-300 ease-in-out delay-150 mt-[-100px];
+}
+
+.navbar__main {
+  @apply z-10 lg:flex lg:min-w-[48%] lg:justify-between;
+}
+
+.navbar__logo {
+  @apply lg:mb-0 mb-10 relative flex-1 tracking-[0.05em];
+}
+
+.navbar__logo-img {
+  @apply lg:text-4xl text-xl;
+}
+
+.navbar__logo-text {
+  @apply lg:text-lg text-xs;
+}
+
+.navbar__list {
+  @apply flex-1 justify-end space-y-5 tracking-[0.03em] block;
+}
+
+.navbar__list-item {
+  @apply relative text-2xl font-medium;
+}
+
+.navbar__toggle {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  z-index: 101;
+}
+.navbar__toggle span {
+  @apply bg-black-500;
+  border-radius: 1px;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -1px 0 0 -15px;
+  transition: height 100ms;
+}
+
+.navbar__toggle span:after,
+.navbar__toggle span:before {
+  content: '';
+  @apply bg-black-500;
+  border-radius: 1px;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  margin-left: -15px;
+  transition: all 200ms;
+}
+
+.navbar__toggle--active span:after,
+.navbar__toggle--active span:before {
+  @apply bg-sky-500;
+}
+
+.navbar__toggle span:after {
+  top: -7px;
+}
+
+.navbar__toggle span:before {
+  bottom: -7px;
+}
+
+.navbar__toggle--active span {
+  height: 0;
+}
+
+.navbar__toggle--active span:after {
+  top: 1px;
+  transform: rotate(45deg);
+}
+
+.navbar__toggle--active span:before {
+  top: 1px;
+  transform: rotate(-45deg);
+}
+
+.path-0 {
+  animation: pathAnim-0 4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pathAnim-0 {
+  0 % {
+    d: path(
+      'M 0,500 L 0,187 C 113.73333333333329,175.39999999999998 227.46666666666658,163.79999999999998 392,179 C 556.5333333333334,194.20000000000002 771.8666666666668,236.20000000000002 955,242 C 1138.1333333333332,247.79999999999998 1289.0666666666666,217.39999999999998 1440,187 L 1440,500 L 0,500 Z'
+    );
+  }
+  25% {
+    d: path(
+      'M 0,500 L 0,187 C 149.60000000000002,191.8 299.20000000000005,196.6 438,178 C 576.8,159.4 704.8,117.4 870,115 C 1035.2,112.6 1237.6,149.8 1440,187 L 1440,500 L 0,500 Z'
+    );
+  }
+  50% {
+    d: path(
+      'M 0,500 L 0,187 C 194,174.33333333333334 388,161.66666666666669 522,152 C 656,142.33333333333331 730,135.66666666666666 873,142 C 1016,148.33333333333334 1228,167.66666666666669 1440,187 L 1440,500 L 0,500 Z'
+    );
+  }
+  75% {
+    d: path(
+      'M 0,500 L 0,187 C 144.2666666666667,152.2 288.5333333333334,117.39999999999999 454,120 C 619.4666666666666,122.60000000000001 806.1333333333334,162.6 974,180 C 1141.8666666666666,197.4 1290.9333333333334,192.2 1440,187 L 1440,500 L 0,500 Z'
+    );
+  }
+  100% {
+    d: path(
+      'M 0,500 L 0,187 C 113.73333333333329,175.39999999999998 227.46666666666658,163.79999999999998 392,179 C 556.5333333333334,194.20000000000002 771.8666666666668,236.20000000000002 955,242 C 1138.1333333333332,247.79999999999998 1289.0666666666666,217.39999999999998 1440,187 L 1440,500 L 0,500 Z'
+    );
+  }
+}

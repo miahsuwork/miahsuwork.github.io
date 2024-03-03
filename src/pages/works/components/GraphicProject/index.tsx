@@ -1,5 +1,5 @@
 import GRAPHIC_LIST from '@/constants/projectGraphic';
-import { Graphic } from '@/models/Graph';
+import { Graphic } from '@/models/graph';
 import { formatDate } from '@/utils/helpers/common';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';

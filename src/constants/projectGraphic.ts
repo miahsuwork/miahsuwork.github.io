@@ -1,6 +1,6 @@
 // graphic
 import { GraphicEnum } from '@/enums/common';
-import { Graphic } from '@/models/Graph';
+import { Graphic } from '@/models/graph';
 import informationAI from '/public/images/works/graphics/201803_AI_01.jpeg';
 import informationAI02 from '/public/images/works/graphics/201803_AI_02.jpeg';
 import informationAI03 from '/public/images/works/graphics/201803_AI_03.jpeg';

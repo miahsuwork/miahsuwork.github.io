@@ -19,7 +19,7 @@
 }
 
 .navbar__bg-bottom {
-  @apply transition duration-300 ease-in-out delay-150 mt-[-100px];
+  @apply transition duration-300 ease-in-out delay-150 md:mt-[-100px] mt-[-10px];
 }
 
 .navbar__main {

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import { PropsWithChildren } from 'react';
 interface IProps {
   isOpen: boolean;
@@ -10,7 +11,7 @@ export default function Hamburger({
 }: PropsWithChildren<IProps>) {
   return (
     <button
-      className={`navbar__toggle ${isOpen ? 'navbar__toggle--active' : ''}`}
+      className={clsx('navbar__toggle', isOpen && 'navbar__toggle--active')}
       type='button'
       onClick={handleToggleNavBar}
     >

@@ -2,6 +2,7 @@ import { SEMINAR_LIST, WEB_LIST } from '@/constants/projectWeb';
 import { imgMouseAni } from '@/utils/helpers/animationHelper';
 import { formatDate } from '@/utils/helpers/common';
 import { useGSAP } from '@gsap/react';
+import clsx from 'clsx';
 import gsap from 'gsap';
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
@@ -66,9 +67,10 @@ const WebProject = () => {
       <div className='md:mt-[6vw] flex flex-wrap justify-between'>
         {webs.map((item, index) => (
           <div
-            className={`pt-[60px] md:pt-[100px] web-item md:w-[45%] ${
-              index % 2 === 0 ? 'md:translate-y-[-12vw]' : ''
-            }`}
+            className={clsx(
+              'pt-[60px] md:pt-[100px] web-item md:w-[45%]',
+              index % 2 === 0 && 'md:translate-y-[-12vw]'
+            )}
             key={index}
           >
             <div className='opacity-0 web-item__inner translate-y-8'>
@@ -84,7 +86,7 @@ const WebProject = () => {
                 )}
               </div>
               <div className='mt-8'>
-                <div className='flex justify-between'>
+                <div className='flex justify-between flex-wrap'>
                   <div>{item.title}</div>
                   <div>
                     {formatDate(item.startTime)} - {formatDate(item.endTime)}
@@ -94,9 +96,10 @@ const WebProject = () => {
                   {item.tags.map((tag, index) => {
                     return (
                       <div
-                        className={`border border-gray-500 py-1 px-2 mx-1 text-xs rounded-xl ${
-                          index === 0 ? 'ml-0' : ''
-                        }`}
+                        className={clsx(
+                          'border border-gray-500 py-1 px-2 mx-1 text-xs rounded-xl',
+                          index === 0 && 'ml-0'
+                        )}
                         key={tag}
                       >
                         {tag}
@@ -110,22 +113,25 @@ const WebProject = () => {
         ))}
       </div>
       <div className='lg:flex lg:flex-wrap mb-[100px] mt-[100px] lg:mt-0'>
-        <div className='mb-6 px-6'>
+        <div className='mb-6 lg:px-6'>
           <div className='mb-3'>Seminar/ Webinar</div>
-          {['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery'].map(
-            (tag, index) => {
-              return (
-                <span
-                  className={`border border-gray-500 py-1 px-2 mx-1 text-xs rounded-xl ${
-                    index === 0 ? 'ml-0' : ''
-                  }`}
-                  key={tag}
-                >
-                  {tag}
-                </span>
-              );
-            }
-          )}
+          <div className='flex flex-wrap'>
+            {['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery'].map(
+              (tag, index) => {
+                return (
+                  <span
+                    className={clsx(
+                      'border border-gray-500 py-1 px-2 m-1 text-xs rounded-xl',
+                      index === 0 && 'ml-0'
+                    )}
+                    key={tag}
+                  >
+                    {tag}
+                  </span>
+                );
+              }
+            )}
+          </div>
           <div className='mt-3'>
             單頁式活動型網站，在有限的時間內完成不同型式與特色的網站。
           </div>

@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import Image from 'next/image';
 
 export default function SlideContact() {
@@ -5,7 +6,7 @@ export default function SlideContact() {
     'flex flex-col fixed items-center top-1/2 -translate-y-1/2 mx-5 z-30';
   return (
     <>
-      <div className={`${fixedCenterClass} left-0 hidden`}>
+      <div className={clsx(fixedCenterClass, 'left-0 hidden')}>
         <div className='[writing-mode:vertical-lr]'>Contact</div>
         <div className='h-[120px] my-3 border-l border-black rounded'></div>
         <Image
@@ -17,7 +18,7 @@ export default function SlideContact() {
           priority
         />
       </div>
-      <div className={`${fixedCenterClass} right-0 hidden`}>
+      <div className={clsx(fixedCenterClass, 'right-0 hidden')}>
         <div className='[writing-mode:vertical-lr]'>SNS</div>
         <div className='h-[120px] my-3 border-l border-black rounded'></div>
         <div className='flex flex-col space-y-4'>

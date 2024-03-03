@@ -1,9 +1,9 @@
 .tab {
-  @apply flex gap-4 lg:justify-end pt-10 -mb-4;
+  @apply md:flex gap-4 lg:justify-end pt-10 lg:-mb-4 z-10 relative;
 }
 
 .tab__item {
-  @apply text-gray-800 cursor-pointer relative py-4;
+  @apply text-gray-800 cursor-pointer relative md:py-4 py-1 pl-[20px];
   transition: all 0.25s;
 }
 
@@ -12,23 +12,19 @@
 }
 
 .tab__item::before {
-  @apply bg-sky-600;
+  @apply bg-sky-600 top-[50%] translate-y-[-50%] left-[-5px] md:top-[-30px] md:left-[50%] md:translate-x-[-50%] md:rotate-0;
   content: '';
   width: 10px;
   height: 10px;
   position: absolute;
-  top: -30px;
-  left: 50%;
   border-radius: 2px;
-  transform: translateX(-50%) rotate(0deg);
   opacity: 0;
   transition: all 0.25s;
 }
 
 .tab__item--active::before {
-  transform: translateX(-50%) rotate(45deg);
+  @apply top-[50%] translate-y-[-50%] left-[-5px] md:top-[0px] md:translate-x-[-50%] rotate-45;
   opacity: 1;
-  top: -5px;
 }
 
 .works__desc {

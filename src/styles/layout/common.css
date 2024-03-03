@@ -3,7 +3,7 @@
 }
 
 .section {
-  margin-bottom: 200px;
+  @apply mb-[100px] lg:mb-[200px];
   display: flex;
   flex-wrap: wrap;
 }
@@ -35,7 +35,7 @@
 }
 
 .section__title-text {
-  font-size: 36px;
+  @apply lg:text-2xl text-xl;
   font-weight: 300;
   padding-left: 50px;
   position: relative;

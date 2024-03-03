@@ -4,6 +4,7 @@ import WORKED_LIST from '@/constants/worked';
 import { WorkedInfo } from '@/models/worked';
 import { formatDate } from '@/utils/helpers/common';
 import { Tab } from '@headlessui/react';
+import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
 import AboutSection from './components/AboutSection';
@@ -18,7 +19,7 @@ export default function About() {
       <RectBackground className='fixed top-0 left-0 -z-10 overflow-hidden' />
       <PageTitle title='About' />
 
-      <AboutSection title='Mia Hsu' num={1} className='pt-[140px]'>
+      <AboutSection title='Mia Hsu' num={1}>
         <div className='flex flex-col-reverse md:flex-row'>
           <div className='md:w-[40vw] md:ml-16 ml-0'>
             <div className='mb-5'>
@@ -70,14 +71,14 @@ export default function About() {
             <Tab.List className='flex md:flex-col mr-10'>
               {WORKED_LIST.map((work, idx) => (
                 <Tab
-                  className={({ selected }) => `
-                      md:mb-0 md:m-2 
-                      mb-5 mr-2 px-2 outline-none hover:text-sky-600
-                      ${
-                        selected
-                          ? 'md:border-l md:border-b-0 border-b border-sky-600  text-sky-600'
-                          : ''
-                      }`}
+                  className={({ selected }) =>
+                    clsx(
+                      'md:mb-0 md:m-2',
+                      'mb-5 mr-2 px-2 outline-none hover:text-sky-600',
+                      selected &&
+                        'md:border-l md:border-b-0 border-b border-sky-600  text-sky-600'
+                    )
+                  }
                   key={idx}
                 >
                   {work.company}

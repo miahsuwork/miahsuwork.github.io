@@ -6,6 +6,7 @@ import {
   strengthPosition,
 } from '@/utils/helpers/animationHelper';
 import { useGSAP } from '@gsap/react';
+import clsx from 'clsx';
 import gsap from 'gsap';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -143,18 +144,20 @@ export default function Home() {
     <div className='project-slide'>
       <div className='main-bg-animation'></div>
       <div
-        className={`project-slide__slide-section ${
-          isVertical ? '' : 'project-slide__slide-section--horizontal'
-        }`}
+        className={clsx(
+          'project-slide__slide-section',
+          !isVertical && 'project-slide__slide-section--horizontal'
+        )}
         ref={swiperRef}
       >
         <RectBackground />
         <div
-          className={`project-slide__container ${
+          className={clsx(
+            'project-slide__container',
             isVertical
               ? 'project-slide__container--vertical'
               : 'project-slide__container--horizontal'
-          }`}
+          )}
         >
           <Swiper
             autoHeight

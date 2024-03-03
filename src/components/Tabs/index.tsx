@@ -1,4 +1,4 @@
-import React from 'react';
+import clsx from 'clsx';
 
 interface IProps {
   list: { id: number; name: string; isActive: boolean }[];
@@ -15,7 +15,7 @@ function Tabs(props: IProps) {
         return (
           <li
             key={item.id}
-            className={`tab__item ${item.isActive ? 'tab__item--active' : ''}`}
+            className={clsx('tab__item', item.isActive && 'tab__item--active')}
             onClick={handleToggleActive(item.id)}
           >
             {item.name}

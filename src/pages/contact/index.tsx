@@ -1,5 +1,6 @@
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import { useRef } from 'react';
 
 export default function Contact() {
@@ -9,17 +10,24 @@ export default function Contact() {
     () => {
       const boxes: HTMLDivElement[] = gsap.utils.toArray('.box');
       boxes.forEach((box) => {
-        gsap.to(box, {
-          x: 100,
-          rotation: 360,
-          scrollTrigger: {
-            trigger: box,
-            start: 'bottom bottom',
-            end: 'top 20%',
-            scrub: 0.5,
-            // markers: true,
-          },
+        ScrollTrigger.create({
+          trigger: box,
+          start: 'top center',
+          end: 'bottom center',
+          toggleActions: 'play none none reverse',
+          // markers: true,
         });
+        // gsap.to(box, {
+        //   x: 100,
+        //   rotation: 360,
+        //   scrollTrigger: {
+        //     trigger: box,
+        //     start: 'bottom bottom',
+        //     end: 'top 20%',
+        //     scrub: 0.5,
+        //     // markers: true,
+        //   },
+        // });
       });
     },
     { scope: main }

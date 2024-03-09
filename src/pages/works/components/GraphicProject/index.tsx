@@ -67,18 +67,19 @@ const GraphicProject = () => {
       //   }
       // });
     },
-    { scope: listRef }
+    { dependencies: [graphics], scope: listRef }
   );
 
   useEffect(() => {
-    setGraphics(
-      GRAPHIC_LIST.sort((a, b) => {
-        return new Date(b.date).getTime() - new Date(a.date).getTime();
-      })
-    );
+    // setGraphics(
+    //   GRAPHIC_LIST.sort((a, b) => {
+    //     return new Date(b.date).getTime() - new Date(a.date).getTime();
+    //   })
+    // );
   }, []);
   return (
     <div className='layout' ref={listRef}>
+      test
       <div className='columns-1 gap-5 md:columns-2 lg:columns-3 [&>.masonry-img:not(:first-child)]:mt-8'>
         {graphics.map((item, index) => (
           <div

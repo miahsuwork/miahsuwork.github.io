@@ -6,9 +6,7 @@ import { ScrollToPlugin } from 'gsap/dist/ScrollToPlugin';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import type { AppProps } from 'next/app';
 
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, ScrollSmoother, useGSAP);
-}
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin, useGSAP);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (

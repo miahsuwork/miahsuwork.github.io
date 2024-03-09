@@ -2,6 +2,7 @@ import GRAPHIC_LIST from '@/constants/projectGraphic';
 import { Graphic } from '@/models/graph';
 import { formatDate } from '@/utils/helpers/common';
 import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 

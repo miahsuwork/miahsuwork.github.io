@@ -28,7 +28,7 @@ export default function Contact() {
   return (
     <div ref={main}>
       <section className='section flex-center column'>
-        <h2>Basic ScrollTrigger with React</h2>
+        <h2>Basic ScrollTrigger with React1</h2>
         <p>Scroll down to see the magic happen!!</p>
       </section>
       <div className='section flex-center column'>

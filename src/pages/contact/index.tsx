@@ -1,5 +1,5 @@
 import { useGSAP } from '@gsap/react';
-import gsap from 'gsap';
+import { gsap } from 'gsap/dist/gsap';
 import { useRef } from 'react';
 
 export default function Contact() {

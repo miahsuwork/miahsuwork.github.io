@@ -39,16 +39,28 @@ const WebProject = () => {
 
       imgs.forEach((img) => {
         imgAni.setShadow(img);
-        img.addEventListener('mouseenter', onMouseEnter);
-        img.addEventListener('mouseleave', onMouseLeave);
-        img.addEventListener('mousemove', onMouseMove);
+        img.addEventListener('mouseenter', (event) => {
+          onMouseEnter(event);
+        });
+        img.addEventListener('mouseleave', (event) => {
+          onMouseLeave(event);
+        });
+        img.addEventListener('mousemove', (event) => {
+          onMouseMove(event);
+        });
       });
 
       return () => {
         imgs.forEach((img) => {
-          img.removeEventListener('mouseenter', onMouseEnter);
-          img.removeEventListener('mouseleave', onMouseLeave);
-          img.removeEventListener('mousemove', onMouseMove);
+          img.removeEventListener('mouseenter', () => {
+            onMouseEnter();
+          });
+          img.removeEventListener('mouseleave', () => {
+            onMouseLeave();
+          });
+          img.removeEventListener('mousemove', () => {
+            onMouseMove();
+          });
         });
       };
     },

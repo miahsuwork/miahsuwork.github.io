@@ -12,13 +12,13 @@
     "prepare": "husky install"
   },
   "lint-staged": {
-    "{,!(.next)/**/}**/*.{ts,tsx,js,jsx,css,json,md}": [
+    "**/*.{ts,tsx,js,jsx,css,json,md}": [
       "prettier --write"
     ],
-    "{,!(.next)/**/}**/*.{ts,tsx,js,jsx}": [
+    "**/*.{ts,tsx,js,jsx}": [
       "eslint --fix --report-unused-disable-directives --max-warnings 0"
     ],
-    "{,!(.next)/**/}**/*.{css}": [
+    "**/*.{css}": [
       "stylelint --fix --max-warnings 0"
     ]
   },

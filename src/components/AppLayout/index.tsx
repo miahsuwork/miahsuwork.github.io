@@ -1,17 +1,24 @@
-import { ReactNode } from 'react';
+import { PropsWithChildren, useEffect, useState } from 'react';
 
+import { Loader } from '../Loader';
 import Footer from './Footer';
 import Header from './Header';
 import SlideContact from './SlideContact';
 
-interface LayoutProps {
-  children?: ReactNode;
-  // any props that come into the component
-}
+export default function AppLayout({ children }: PropsWithChildren) {
+  const [isInitSuccess, setIsInitSuccess] = useState(false);
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      setIsInitSuccess(true);
+    }, 2000);
+    return () => {
+      clearTimeout(interval);
+    };
+  }, []);
 
-export default function AppLayout({ children, ...props }: LayoutProps) {
   return (
     <div className='flex flex-col min-h-screen'>
+      <Loader hide={isInitSuccess} />
       <Header />
       <main className='flex-1'>{children}</main>
       <Footer />

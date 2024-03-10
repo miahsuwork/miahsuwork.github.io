@@ -1,0 +1,758 @@
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99999;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #d8f3f9;
+}
+.preload-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+/*=======================
+  01 - 一個方塊轉動
+
+<div class="loader">
+	<div class="preload-inner">
+		<div class="spinner spinner01"></div>
+	</div>
+</div>
+=========================*/
+
+.spinner.spinner01 {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #ffffff;
+  animation: sk-rotateplane 1.2s infinite ease-in-out;
+}
+
+@keyframes sk-rotateplane {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+/*=======================
+  02 - 一個圓圈(漸大漸小)
+
+<div class="loader">
+	<div class="preload-inner">
+		<div class="spinner spinner02">
+		  <div class="double-bounce1"></div>
+		  <div class="double-bounce2"></div>
+		</div>
+	</div>
+</div>
+=========================*/
+.spinner.spinner02 {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  animation-delay: -1s;
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+/*=======================
+  03 - 長方形波動
+
+<div class="loader">
+	<div class="preload-inner">
+		<div class="spinner spinner03">
+		  <div class="rect1"></div>
+		  <div class="rect2"></div>
+		  <div class="rect3"></div>
+		  <div class="rect4"></div>
+		  <div class="rect5"></div>
+		</div>
+	</div>
+</div>
+=========================*/
+.spinner.spinner03 {
+  width: 50px;
+  height: 40px;
+  margin: 100px auto;
+  font-size: 10px;
+  text-align: center;
+}
+
+.spinner.spinner03 > div {
+  display: inline-block;
+  width: 6px;
+  height: 100%;
+  background-color: #ffffff;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+
+.spinner.spinner03 .rect2 {
+  animation-delay: -1.1s;
+}
+
+.spinner.spinner03 .rect3 {
+  animation-delay: -1s;
+}
+
+.spinner.spinner03 .rect4 {
+  animation-delay: -0.9s;
+}
+
+.spinner.spinner03 .rect5 {
+  animation-delay: -0.8s;
+}
+
+@keyframes sk-stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+  }
+}
+
+/*=======================
+  04 - 兩個方塊
+
+<div class="loader">
+	<div class="preload-inner">
+		<div class="spinner spinner04">
+		  <div class="cube1"></div>
+		  <div class="cube2"></div>
+		</div>  
+	</div>
+</div>
+=========================*/
+.spinner.spinner04 {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.cube1,
+.cube2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #ffffff;
+  animation: sk-cubemove 2s infinite ease-in-out;
+}
+
+.cube2 {
+  animation-delay: -0.9s;
+}
+
+@keyframes sk-cubemove {
+  25% {
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+  }
+  50% {
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+  }
+  50.1% {
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+  }
+  75% {
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+/*=======================
+  05 - 一個圓圈(右滑)
+
+<div class="loader">
+	<div class="preload-inner">
+		<div class="spinner spinner05"></div>
+	</div>
+</div>
+=========================*/
+.spinner.spinner05 {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  background-color: #ffffff;
+  border-radius: 100%;
+  animation: sk-scaleout 1s infinite ease-in-out;
+}
+
+@keyframes sk-scaleout {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+/*=======================
+  06 - 點點旋轉
+
+<div class="loader">
+	<div class="preload-inner">
+		<div class="spinner spinner06">
+		  <div class="dot1"></div>
+		  <div class="dot2"></div>
+		</div>
+	</div>
+</div>
+=========================*/
+.spinner.spinner06 {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+  text-align: center;
+  animation: sk-rotate 2s infinite linear;
+}
+
+.dot1,
+.dot2 {
+  position: absolute;
+  top: 0;
+  display: inline-block;
+  width: 60%;
+  height: 60%;
+  background-color: #ffffff;
+  border-radius: 100%;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.dot2 {
+  top: auto;
+  bottom: 0;
+  animation-delay: -1s;
+}
+
+@keyframes sk-rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+/*=======================
+  07 - 3點一排
+
+<div class="loader">
+	<div class="preload-inner">
+		<div class="spinner spinner07">
+		  <div class="bounce1"></div>
+		  <div class="bounce2"></div>
+		  <div class="bounce3"></div>
+		</div>
+	</div>
+</div>
+=========================*/
+.spinner.spinner07 {
+  width: 70px;
+  margin: 100px auto 0;
+  text-align: center;
+}
+
+.spinner.spinner07 > div {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  background-color: #ffffff;
+  border-radius: 100%;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner.spinner07 .bounce1 {
+  animation-delay: -0.32s;
+}
+
+.spinner.spinner07 .bounce2 {
+  animation-delay: -0.16s;
+}
+
+@keyframes sk-bouncedelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/*=======================
+  08 - 3點一排
+
+<div class="loader">
+	<div class="preload-inner">
+		<div class="sk-circle sk-circle08">
+		  <div class="sk-circle1 sk-child"></div>
+		  <div class="sk-circle2 sk-child"></div>
+		  <div class="sk-circle3 sk-child"></div>
+		  <div class="sk-circle4 sk-child"></div>
+		  <div class="sk-circle5 sk-child"></div>
+		  <div class="sk-circle6 sk-child"></div>
+		  <div class="sk-circle7 sk-child"></div>
+		  <div class="sk-circle8 sk-child"></div>
+		  <div class="sk-circle9 sk-child"></div>
+		  <div class="sk-circle10 sk-child"></div>
+		  <div class="sk-circle11 sk-child"></div>
+		  <div class="sk-circle12 sk-child"></div>
+		</div>
+	</div>
+</div>
+=========================*/
+.sk-circle.sk-circle08 {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+.sk-circle.sk-circle08 .sk-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.sk-circle.sk-circle08 .sk-child:before {
+  display: block;
+  width: 15%;
+  height: 15%;
+  margin: 0 auto;
+  content: '';
+  background-color: #ffffff;
+  border-radius: 100%;
+  animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
+}
+.sk-circle.sk-circle08 .sk-circle2 {
+  transform: rotate(30deg);
+}
+.sk-circle.sk-circle08 .sk-circle3 {
+  transform: rotate(60deg);
+}
+.sk-circle.sk-circle08 .sk-circle4 {
+  transform: rotate(90deg);
+}
+.sk-circle.sk-circle08 .sk-circle5 {
+  transform: rotate(120deg);
+}
+.sk-circle.sk-circle08 .sk-circle6 {
+  transform: rotate(150deg);
+}
+.sk-circle.sk-circle08 .sk-circle7 {
+  transform: rotate(180deg);
+}
+.sk-circle.sk-circle08 .sk-circle8 {
+  transform: rotate(210deg);
+}
+.sk-circle.sk-circle08 .sk-circle9 {
+  transform: rotate(240deg);
+}
+.sk-circle.sk-circle08 .sk-circle10 {
+  transform: rotate(270deg);
+}
+.sk-circle.sk-circle08 .sk-circle11 {
+  transform: rotate(300deg);
+}
+.sk-circle.sk-circle08 .sk-circle12 {
+  transform: rotate(330deg);
+}
+.sk-circle.sk-circle08 .sk-circle2:before {
+  animation-delay: -1.1s;
+}
+.sk-circle.sk-circle08 .sk-circle3:before {
+  animation-delay: -1s;
+}
+.sk-circle.sk-circle08 .sk-circle4:before {
+  animation-delay: -0.9s;
+}
+.sk-circle.sk-circle08 .sk-circle5:before {
+  animation-delay: -0.8s;
+}
+.sk-circle.sk-circle08 .sk-circle6:before {
+  animation-delay: -0.7s;
+}
+.sk-circle.sk-circle08 .sk-circle7:before {
+  animation-delay: -0.6s;
+}
+.sk-circle.sk-circle08 .sk-circle8:before {
+  animation-delay: -0.5s;
+}
+.sk-circle.sk-circle08 .sk-circle9:before {
+  animation-delay: -0.4s;
+}
+.sk-circle.sk-circle08 .sk-circle10:before {
+  animation-delay: -0.3s;
+}
+.sk-circle.sk-circle08 .sk-circle11:before {
+  animation-delay: -0.2s;
+}
+.sk-circle.sk-circle08 .sk-circle12:before {
+  animation-delay: -0.1s;
+}
+
+@keyframes sk-circleBounceDelay {
+  0%,
+  80%,
+  100% {
+    transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+
+/*=======================
+  09 - 多方塊
+
+<div class="loader">
+	<div class="preload-inner">
+		<div class="sk-cube-grid">
+		  <div class="sk-cube sk-cube1"></div>
+		  <div class="sk-cube sk-cube2"></div>
+		  <div class="sk-cube sk-cube3"></div>
+		  <div class="sk-cube sk-cube4"></div>
+		  <div class="sk-cube sk-cube5"></div>
+		  <div class="sk-cube sk-cube6"></div>
+		  <div class="sk-cube sk-cube7"></div>
+		  <div class="sk-cube sk-cube8"></div>
+		  <div class="sk-cube sk-cube9"></div>
+		</div> 
+	</div>
+</div>
+=========================*/
+.sk-cube-grid {
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.sk-cube-grid .sk-cube {
+  float: left;
+  width: 33%;
+  height: 33%;
+  background-color: #ffffff;
+  animation: sk-cubeGridScaleDelay 1.3s infinite ease-in-out;
+}
+.sk-cube-grid .sk-cube1 {
+  animation-delay: 0.2s;
+}
+.sk-cube-grid .sk-cube2 {
+  animation-delay: 0.3s;
+}
+.sk-cube-grid .sk-cube3 {
+  animation-delay: 0.4s;
+}
+.sk-cube-grid .sk-cube4 {
+  animation-delay: 0.1s;
+}
+.sk-cube-grid .sk-cube5 {
+  animation-delay: 0.2s;
+}
+.sk-cube-grid .sk-cube6 {
+  animation-delay: 0.3s;
+}
+.sk-cube-grid .sk-cube7 {
+  animation-delay: 0s;
+}
+.sk-cube-grid .sk-cube8 {
+  animation-delay: 0.1s;
+}
+.sk-cube-grid .sk-cube9 {
+  animation-delay: 0.2s;
+}
+
+@keyframes sk-cubeGridScaleDelay {
+  0%,
+  70%,
+  100% {
+    transform: scale3D(1, 1, 1);
+  }
+  35% {
+    transform: scale3D(0, 0, 1);
+  }
+}
+
+/*=======================
+  10 - 圓圈旋轉
+
+<div class="loader">
+	<div class="preload-inner">
+		<div class="sk-fading-circle">
+		  <div class="sk-circle1 sk-circle"></div>
+		  <div class="sk-circle2 sk-circle"></div>
+		  <div class="sk-circle3 sk-circle"></div>
+		  <div class="sk-circle4 sk-circle"></div>
+		  <div class="sk-circle5 sk-circle"></div>
+		  <div class="sk-circle6 sk-circle"></div>
+		  <div class="sk-circle7 sk-circle"></div>
+		  <div class="sk-circle8 sk-circle"></div>
+		  <div class="sk-circle9 sk-circle"></div>
+		  <div class="sk-circle10 sk-circle"></div>
+		  <div class="sk-circle11 sk-circle"></div>
+		  <div class="sk-circle12 sk-circle"></div>
+		</div>
+	</div>
+</div>
+=========================*/
+.sk-fading-circle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 100px auto;
+}
+
+.sk-fading-circle .sk-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.sk-fading-circle .sk-circle:before {
+  display: block;
+  width: 15%;
+  height: 15%;
+  margin: 0 auto;
+  content: '';
+  background-color: #ffffff;
+  border-radius: 100%;
+  animation: sk-circleFadeDelay 1.2s infinite ease-in-out both;
+}
+.sk-fading-circle .sk-circle2 {
+  transform: rotate(30deg);
+}
+.sk-fading-circle .sk-circle3 {
+  transform: rotate(60deg);
+}
+.sk-fading-circle .sk-circle4 {
+  transform: rotate(90deg);
+}
+.sk-fading-circle .sk-circle5 {
+  transform: rotate(120deg);
+}
+.sk-fading-circle .sk-circle6 {
+  transform: rotate(150deg);
+}
+.sk-fading-circle .sk-circle7 {
+  transform: rotate(180deg);
+}
+.sk-fading-circle .sk-circle8 {
+  transform: rotate(210deg);
+}
+.sk-fading-circle .sk-circle9 {
+  transform: rotate(240deg);
+}
+.sk-fading-circle .sk-circle10 {
+  transform: rotate(270deg);
+}
+.sk-fading-circle .sk-circle11 {
+  transform: rotate(300deg);
+}
+.sk-fading-circle .sk-circle12 {
+  transform: rotate(330deg);
+}
+.sk-fading-circle .sk-circle2:before {
+  animation-delay: -1.1s;
+}
+.sk-fading-circle .sk-circle3:before {
+  animation-delay: -1s;
+}
+.sk-fading-circle .sk-circle4:before {
+  animation-delay: -0.9s;
+}
+.sk-fading-circle .sk-circle5:before {
+  animation-delay: -0.8s;
+}
+.sk-fading-circle .sk-circle6:before {
+  animation-delay: -0.7s;
+}
+.sk-fading-circle .sk-circle7:before {
+  animation-delay: -0.6s;
+}
+.sk-fading-circle .sk-circle8:before {
+  animation-delay: -0.5s;
+}
+.sk-fading-circle .sk-circle9:before {
+  animation-delay: -0.4s;
+}
+.sk-fading-circle .sk-circle10:before {
+  animation-delay: -0.3s;
+}
+.sk-fading-circle .sk-circle11:before {
+  animation-delay: -0.2s;
+}
+.sk-fading-circle .sk-circle12:before {
+  animation-delay: -0.1s;
+}
+
+@-webkit-keyframes sk-circleFadeDelay {
+  0%,
+  39%,
+  100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+@keyframes sk-circleFadeDelay {
+  0%,
+  39%,
+  100% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+}
+
+/*=======================
+  11 - 四個方形對折
+
+<div class="loader">
+	<div class="preload-inner">
+		<div class="sk-folding-cube">
+		  <div class="sk-cube1 sk-cube"></div>
+		  <div class="sk-cube2 sk-cube"></div>
+		  <div class="sk-cube4 sk-cube"></div>
+		  <div class="sk-cube3 sk-cube"></div>
+		</div>
+	</div>
+</div>
+=========================*/
+.sk-folding-cube {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  margin: 20px auto;
+  transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 50%;
+  transform: scale(1.1);
+}
+.sk-folding-cube .sk-cube:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background-color: #ffffff;
+  transform-origin: 100% 100%;
+  animation: sk-foldCubeAngle 2.4s infinite linear both;
+}
+.sk-folding-cube .sk-cube2 {
+  transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  animation-delay: 0.6s;
+}
+.sk-folding-cube .sk-cube4:before {
+  animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%,
+  10% {
+    opacity: 0;
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+    transform: perspective(140px) rotateX(-180deg);
+  }
+  25%,
+  75% {
+    opacity: 1;
+    transform: perspective(140px) rotateX(0deg);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: perspective(140px) rotateY(180deg);
+  }
+}
+
+@keyframes sk-foldCubeAngle {
+  0%,
+  10% {
+    opacity: 0;
+    transform: perspective(140px) rotateX(-180deg);
+  }
+  25%,
+  75% {
+    opacity: 1;
+    transform: perspective(140px) rotateX(0deg);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: perspective(140px) rotateY(180deg);
+  }
+}

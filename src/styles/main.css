@@ -6,5 +6,6 @@
 @import 'layout/common.css';
 @import 'layout/header.css';
 @import 'components/tab.css';
+@import 'components/loader.css';
 @import 'pages/landing.css';
 @import 'pages/works.css';

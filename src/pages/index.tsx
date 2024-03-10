@@ -83,36 +83,20 @@ export default function Home() {
       const onMouseMove = contextSafe(imgAni.onMouseMove);
 
       const container = swiperRef.current as HTMLDivElement;
-      container.addEventListener('mousemove', (event) => {
-        onMouseMoveContainer(event);
-      });
+      container.addEventListener('mousemove', onMouseMoveContainer);
       slides.forEach((slide) => {
         imgAni.setShadow(slide);
-        slide.addEventListener('mouseenter', (event) => {
-          onMouseEnter(event);
-        });
-        slide.addEventListener('mouseleave', (event) => {
-          onMouseLeave(event);
-        });
-        slide.addEventListener('mousemove', (event) => {
-          onMouseMove(event);
-        });
+        slide.addEventListener('mouseenter', onMouseEnter);
+        slide.addEventListener('mouseleave', onMouseLeave);
+        slide.addEventListener('mousemove', onMouseMove);
       });
 
       return () => {
-        container.removeEventListener('mousemove', () => {
-          onMouseMoveContainer();
-        });
+        container.removeEventListener('mousemove', onMouseMoveContainer);
         slides.forEach((slide) => {
-          slide.removeEventListener('mouseenter', () => {
-            onMouseEnter();
-          });
-          slide.removeEventListener('mouseleave', () => {
-            onMouseLeave();
-          });
-          slide.removeEventListener('mousemove', () => {
-            onMouseMove();
-          });
+          slide.removeEventListener('mouseenter', onMouseEnter);
+          slide.removeEventListener('mouseleave', onMouseLeave);
+          slide.removeEventListener('mousemove', onMouseMove);
         });
       };
     },
@@ -201,12 +185,8 @@ export default function Home() {
                 spaceBetween: 100,
               },
             }}
-            onSlideChangeTransitionStart={(event) => {
-              handleSlideStart(event);
-            }}
-            onSlideChangeTransitionEnd={() => {
-              handleSlideEnd(event);
-            }}
+            onSlideChangeTransitionStart={handleSlideStart}
+            onSlideChangeTransitionEnd={handleSlideEnd}
           >
             {WEB_LIST.filter((item) => item.isShowLanding).map(
               (item, index) => {

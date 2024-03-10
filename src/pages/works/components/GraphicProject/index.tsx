@@ -13,66 +13,27 @@ const GraphicProject = () => {
   useGSAP(
     () => {
       const imgs: HTMLDivElement[] = gsap.utils.toArray('.masonry-img');
+
       imgs.forEach((img) => {
         gsap.to(img, {
-          opacity: 1,
-          duration: 1.5,
           scrollTrigger: {
             trigger: img,
             toggleActions: 'restart none none none',
           },
+          opacity: 1,
+          duration: 1.5,
         });
       });
-
-      // ScrollTrigger.batch('.masonry-img', {
-      //   interval: 0.1, // time window (in seconds) for batching to occur.
-      //   batchMax: 4, // maximum batch size (targets). Can be function-based for dynamic values
-      //   onEnter: (batch) =>
-      //     gsap.to(batch, {
-      //       duration: 0.8,
-      //       opacity: 1,
-      //       yPercent: 0,
-      //       ease: 'back.out(1)',
-      //     }),
-      //   onLeave: (batch) =>
-      //     gsap.to(batch, {
-      //       opacity: 0,
-      //       yPercent: -10,
-      //     }),
-      //   onEnterBack: (batch) =>
-      //     gsap.to(batch, {
-      //       duration: 1,
-      //       opacity: 1,
-      //       yPercent: 0,
-      //       ease: 'back.out(1)',
-      //     }),
-      //   onLeaveBack: (batch) =>
-      //     gsap.to(batch, {
-      //       opacity: 0,
-      //       yPercent: 10,
-      //     }),
-      //   // you can also define most normal ScrollTrigger values like start, end, etc.
-      //   start: 'top bottom-=10%',
-      //   end: 'bottom top',
-      // });
-
-      // gsap.from('.masonry-img', {
-      //   opacity: 0,
-      //   scrollTrigger: {
-      //     trigger: listRef.current,
-      //     toggleActions: "play none none reverse"
-      //   }
-      // });
     },
     { scope: listRef }
   );
 
   useEffect(() => {
-    // setGraphics(
-    //   GRAPHIC_LIST.sort((a, b) => {
-    //     return new Date(b.date).getTime() - new Date(a.date).getTime();
-    //   })
-    // );
+    setGraphics(
+      GRAPHIC_LIST.sort((a, b) => {
+        return new Date(b.date).getTime() - new Date(a.date).getTime();
+      })
+    );
   }, []);
   return (
     <div className='layout' ref={listRef}>

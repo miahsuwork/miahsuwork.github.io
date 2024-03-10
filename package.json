@@ -6,14 +6,20 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "prettier": "prettier '{,!(.next)/**/}**/*.{js,jsx,ts,tsx,css}' --write",
+    "lint": "next lint && npm run lint:styles",
+    "lint:styles": "stylelint \"src/**/*.css\" --fix --max-warnings 0",
+    "prettier": "prettier '{,!(.next)/**/}**/*.{js,jsx,ts,tsx,css,json}' --write",
     "prepare": "husky install"
   },
   "lint-staged": {
-    "**/*.{ts,tsx,js,jsx}": [
-      "npm run prettier",
-      "eslint"
+    "{,!(.next)/**/}**/*.{ts,tsx,js,jsx,css,json,md}": [
+      "prettier --write"
+    ],
+    "{,!(.next)/**/}**/*.{ts,tsx,js,jsx}": [
+      "eslint --fix --report-unused-disable-directives --max-warnings 0"
+    ],
+    "{,!(.next)/**/}**/*.{css}": [
+      "stylelint --fix --max-warnings 0"
     ]
   },
   "dependencies": {
@@ -59,6 +65,8 @@
     "eslint-config-prettier": "^8.8.0",
     "husky": "^8.0.0",
     "lint-staged": "^13.2.1",
-    "prettier": "^2.8.7"
+    "prettier": "^2.8.7",
+    "stylelint": "^16.2.1",
+    "stylelint-config-recess-order": "^5.0.0"
   }
 }

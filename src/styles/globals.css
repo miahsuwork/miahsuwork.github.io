@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.test-border * {
-  border: 1px solid red;
-}
-
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -46,9 +42,8 @@ html {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
-  opacity: 0.4;
+  height: 100%;
   background: radial-gradient(
       ellipse at center,
       theme('colors.sky.100') 0%,
@@ -64,10 +59,11 @@ html {
         theme('colors.sky.100') 0%,
         rgba(0, 0, 0, 0) 70%
       )
-      #fff;
+      #ffffff;
   background-repeat: no-repeat, no-repeat, no-repeat;
-  background-size: 800px 800px, 600px 600px, 800px 800px;
   background-attachment: fixed;
+  background-size: 800px 800px, 600px 600px, 800px 800px;
+  opacity: 0.4;
   animation: bganimation 30s infinite;
 }
 

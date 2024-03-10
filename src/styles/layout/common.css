@@ -10,47 +10,47 @@
 
 .section__title {
   position: relative;
-  margin-bottom: 60px;
   width: 100%;
+  margin-bottom: 60px;
 }
 
 .section__title-num {
-  color: theme('colors.sky.600');
-  font-size: 14px;
-  font-weight: 400;
   position: absolute;
   top: -10px;
+  font-size: 14px;
+  font-weight: 400;
+  color: theme('colors.sky.600');
 }
 
 .section__title-num::after {
-  content: '';
-  background-color: theme('colors.sky.600');
+  position: absolute;
+  top: 100%;
+  left: 150%;
   display: inline-block;
   width: 16px;
   height: 1px;
+  content: '';
+  background-color: theme('colors.sky.600');
   transform: rotate(305deg);
-  position: absolute;
-  left: 150%;
-  top: 100%;
 }
 
 .section__title-text {
   @apply lg:text-2xl text-xl;
-  font-weight: 300;
-  padding-left: 50px;
   position: relative;
+  padding-left: 50px;
+  font-weight: 300;
 }
 
 .section__title-text::after {
-  content: '';
+  position: absolute;
+  top: 50%;
+  display: inline-block;
   width: 200px;
   height: 1px;
-  display: inline-block;
-  top: 50%;
-  transform: translateY(-50%);
-  position: absolute;
   margin-left: 15px;
+  content: '';
   background-color: theme('colors.black.500');
+  transform: translateY(-50%);
 }
 
 .list__item {
@@ -60,21 +60,21 @@
 }
 
 .list__item::before {
-  content: '';
-  width: 7px;
-  height: 7px;
-  display: inline-block;
-  background-color: theme('colors.sky.600');
-  border-radius: 1px;
   position: absolute;
   top: 50%;
   left: 0;
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  content: '';
+  background-color: theme('colors.sky.600');
+  border-radius: 1px;
   transform: translateY(-50%) rotate(40deg);
 }
 
 .list__item--outline::before {
+  background-color: #ffffff;
   border: 1px solid theme('colors.sky.600');
-  background-color: #fff;
 }
 
 .list__item--yellow::before {
@@ -87,13 +87,13 @@
 
 .btn {
   padding: 10px 20px;
-  border-radius: 5px;
-  background-color: theme('colors.sky.600');
-  color: #fff;
   font-size: 14px;
   font-weight: 400;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  background-color: theme('colors.sky.600');
+  border-radius: 5px;
   transition: background-color 0.3s;
 }
 
@@ -102,14 +102,14 @@
 }
 
 .btn--outline {
-  background-color: #fff;
-  border: 1px solid theme('colors.sky.600');
   color: theme('colors.sky.600');
+  background-color: #ffffff;
+  border: 1px solid theme('colors.sky.600');
 }
 
 .btn--outline:hover {
+  color: #ffffff;
   background-color: theme('colors.sky.600');
-  color: #fff;
 }
 
 /* .growth_circle-orbit-line {

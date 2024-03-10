@@ -8,7 +8,8 @@
   @apply md:py-4;
 }
 
-.tab__item:hover, .tab__item--active  {
+.tab__item:hover,
+.tab__item--active {
   @apply text-sky-500;
 }
 

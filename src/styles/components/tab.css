@@ -1,33 +1,27 @@
 .tab {
-  @apply md:flex gap-4 lg:justify-end pt-10 lg:-mb-4 z-10 relative;
+  @apply gap-4 pt-10 z-10 relative;
+  @apply md:flex md:justify-end md:-mb-4;
 }
 
 .tab__item {
-  @apply text-gray-800 cursor-pointer relative md:py-4 py-1 pl-[20px];
-  transition: all 0.25s;
+  @apply text-gray-800 cursor-pointer relative py-1 pl-[20px] transition-all duration-300;
+  @apply md:py-4;
 }
 
-.tab__item:hover {
+.tab__item:hover, .tab__item--active  {
   @apply text-sky-500;
 }
 
 .tab__item::before {
-  @apply bg-sky-600 top-[50%] translate-y-[-50%] left-[-5px] md:top-[-30px] md:left-[50%] md:translate-x-[-50%] md:rotate-0;
-  content: '';
-  width: 10px;
-  height: 10px;
-  position: absolute;
-  border-radius: 2px;
-  opacity: 0;
-  transition: all 0.25s;
+  @apply bg-sky-600 top-[50%] translate-y-[-50%] left-[-5px] transition-all duration-300 opacity-0 absolute content-[''] w-[10px] h-[10px];
+  @apply md:top-[-30px] md:left-[50%] md:translate-x-[-50%] md:rotate-0;
 }
 
 .tab__item--active::before {
-  @apply top-[50%] translate-y-[-50%] left-[-5px] md:top-[0px] md:translate-x-[-50%] rotate-45;
-  opacity: 1;
+  @apply top-[50%] translate-y-[-50%] left-[-5px] rotate-45 opacity-100;
+  @apply md:top-[0px] md:translate-x-[-50%] md:left-[50%];
 }
 
 .works__desc {
-  @apply text-gray-800;
-  opacity: 1;
+  @apply text-gray-800 opacity-100;
 }

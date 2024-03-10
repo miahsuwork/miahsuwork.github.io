@@ -16,10 +16,6 @@ const GraphicProject = () => {
 
       imgs.forEach((img) => {
         gsap.to(img, {
-          scrollTrigger: {
-            trigger: img,
-            toggleActions: 'restart none none none',
-          },
           opacity: 1,
           duration: 1.5,
         });

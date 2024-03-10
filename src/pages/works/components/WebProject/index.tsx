@@ -21,10 +21,6 @@ const WebProject = () => {
 
       items.forEach((item) => {
         gsap.to(item, {
-          scrollTrigger: {
-            trigger: item,
-            toggleActions: 'restart none none none',
-          },
           opacity: 1,
           duration: 1,
           translateY: 0,

@@ -32,7 +32,11 @@ export const Loader = ({ hide }: IProps) => {
       });
     });
 
-    hide ? hideLoader() : showLoader();
+    if (hide) {
+      hideLoader();
+    } else {
+      showLoader();
+    }
   }, [contextSafe, hide]);
 
   return (

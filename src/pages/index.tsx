@@ -10,7 +10,7 @@ import clsx from 'clsx';
 import gsap from 'gsap';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 import { useWindowSize } from 'react-use';
 import 'swiper/css/autoplay';
 import 'swiper/css/mousewheel';
@@ -20,10 +20,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 export default function Home() {
   const swiperRef = useRef<HTMLDivElement>(null);
   const { width, height } = useWindowSize();
-  const [isVertical, setIsVertical] = useState(false);
-  useEffect(() => {
-    width > 1200 ? setIsVertical(true) : setIsVertical(false);
-  }, [width]);
+  const isVertical = width > 1200;
 
   const { contextSafe } = useGSAP(
     (context, contextSafe) => {

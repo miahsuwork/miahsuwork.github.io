@@ -64,8 +64,8 @@
   width: 100%;
   height: auto;
   object-fit: cover;
-  filter: grayscale(100%);
   border-radius: 0.75em;
+  filter: grayscale(100%);
 }
 
 .project-slide__swiper .swiper-slide-active img {
@@ -114,8 +114,8 @@
 }
 
 .project-slide__swiper .swiper-slide-active .project-slide__info::before {
-  transition: transform 0.75s;
   transform: scale(1, 1);
+  transition: transform 0.75s;
 }
 
 .project-slide__swiper .swiper-slide-active .project-slide__title,

@@ -8,7 +8,7 @@
     "lint": "eslint . && npm run lint:styles",
     "lint:styles": "stylelint \"src/**/*.css\" --fix --max-warnings 0",
     "prettier": "prettier '{,!(.next)/**/}**/*.{js,jsx,ts,tsx,css,json}' --write",
-    "prepare": "husky install"
+    "prepare": "husky"
   },
   "lint-staged": {
     "**/*.{ts,tsx,js,jsx,css,json,md}": [
@@ -58,8 +58,8 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^10.1.8",
-    "husky": "^8.0.0",
-    "lint-staged": "^13.2.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.5.0",
     "prettier": "^3.9.6",
     "stylelint": "^17.15.0",
     "stylelint-config-recess-order": "^7.8.0",

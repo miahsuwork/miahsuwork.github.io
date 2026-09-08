@@ -5,14 +5,18 @@ import { useGSAP } from '@gsap/react';
 import clsx from 'clsx';
 import gsap from 'gsap';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const WebProject = () => {
   const listRef = useRef<HTMLDivElement>(null);
-  const [webs, setWebs] = useState(WEB_LIST);
+  const [webs] = useState(() =>
+    WEB_LIST.sort(
+      (a, b) => new Date(b.endTime).getTime() - new Date(a.endTime).getTime()
+    )
+  );
 
   useGSAP(
     (context, contextSafe) => {
@@ -51,13 +55,6 @@ const WebProject = () => {
     { scope: listRef }
   );
 
-  useEffect(() => {
-    setWebs(
-      WEB_LIST.sort((a, b) => {
-        return new Date(b.endTime).getTime() - new Date(a.endTime).getTime();
-      })
-    );
-  }, []);
   return (
     <div className='layout' ref={listRef}>
       <div className='md:mt-[6vw] flex flex-wrap justify-between'>

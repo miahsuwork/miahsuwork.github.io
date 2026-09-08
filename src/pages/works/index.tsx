@@ -1,12 +1,12 @@
+import GraphicProject from '@/components/GraphicProject';
 import { PageTitle } from '@/components/PageTitle';
 import Tabs from '@/components/Tabs';
+import WebProject from '@/components/WebProject';
 import { WorkTypeEnum } from '@/enums/common';
 import { WorkType } from '@/models/workType';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { useEffect, useRef, useState } from 'react';
-import GraphicProject from './components/GraphicProject';
-import WebProject from './components/WebProject';
 
 export default function Works() {
   const workRef = useRef<HTMLDivElement>(null);

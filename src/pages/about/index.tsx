@@ -1,3 +1,4 @@
+import AboutSection from '@/components/AboutSection';
 import { PageTitle } from '@/components/PageTitle';
 import { RectBackground } from '@/components/RectBackground';
 import WORKED_LIST from '@/constants/worked';
@@ -7,7 +8,6 @@ import { Tab } from '@headlessui/react';
 import clsx from 'clsx';
 import Image from 'next/image';
 import Link from 'next/link';
-import AboutSection from './components/AboutSection';
 
 const getWorkYears = (date: string) => {
   return new Date().getFullYear() - new Date(date).getFullYear();

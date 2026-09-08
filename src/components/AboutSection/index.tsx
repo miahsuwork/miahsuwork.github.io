@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { PropsWithChildren, useEffect, useState } from 'react';
+import { PropsWithChildren } from 'react';
 
 interface IProps {
   title: string;
@@ -8,10 +8,7 @@ interface IProps {
 }
 
 const AboutSection = (props: PropsWithChildren<IProps>) => {
-  const [num, setNum] = useState('');
-  useEffect(() => {
-    setNum(props.num.toString().padStart(2, '0'));
-  }, [props.num]);
+  const num = props.num.toString().padStart(2, '0');
   return (
     <div
       className={clsx(

@@ -1,9 +1,19 @@
 .works__header {
-  @apply w-full lg:mt-[20px] lg:w-[70%];
+  width: 100%;
+}
+@media (min-width: 1024px) {
+  .works__header {
+    width: 70%;
+    margin-top: 20px;
+  }
 }
 
 .works__decorate {
-  @apply flex flex-wrap justify-end w-full relative;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  width: 100%;
 }
 
 .works__decorate-rect {
@@ -16,28 +26,39 @@
 }
 
 .works__decorate-line {
-  @apply bg-black-300;
+  background-color: var(--color-black-300);
 }
 
 .works__desc {
-  @apply w-full text-gray-800 mb-9;
+  width: 100%;
+  margin-bottom: 36px;
+  color: var(--color-gray-800);
 }
 
-.works__list {
-  @apply lg:pt-[120px];
+@media (min-width: 1024px) {
+  .works__list {
+    padding-top: 120px;
+  }
 }
 
 .seminar {
   position: relative;
   z-index: 1;
   display: block;
+  width: 100%;
+  height: auto;
   padding: 0;
   margin-right: auto;
   margin-left: auto;
   overflow: hidden;
   touch-action: pan-y;
   list-style: none;
-  @apply lg:w-[600px] w-full lg:h-[350px] h-auto;
+}
+@media (min-width: 1024px) {
+  .seminar {
+    width: 600px;
+    height: 350px;
+  }
 }
 .seminar .swiper-wrapper {
   position: relative;
@@ -51,7 +72,6 @@
   transition-property: transform;
 }
 .seminar__item {
-  @apply rounded-lg;
   position: relative;
   display: flex;
   display: block;
@@ -63,6 +83,7 @@
   font-size: 22px;
   font-weight: bold;
   color: #ffffff;
+  border-radius: 8px;
   box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.15);
   transform-style: preserve-3d;
   transition-property: transform;

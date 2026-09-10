@@ -1,4 +1,4 @@
-import theme from '@/tailwind-theme';
+import theme from '@/theme-colors';
 import React from 'react';
 
 export default function MenuBg() {

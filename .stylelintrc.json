@@ -1,7 +1,6 @@
 {
   "extends": ["stylelint-config-recess-order"],
   "rules": {
-    "at-rule-no-unknown": null,
     "color-named": "never",
     "color-hex-length": "long",
     "function-disallowed-list": ["rgb", "hsl"],

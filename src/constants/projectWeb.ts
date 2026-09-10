@@ -1,17 +1,17 @@
 import { WebTagEnum } from '@/enums/common';
-import cbdc from '/public/images/works/webs/cbdc.png';
-import ecover from '/public/images/works/webs/ecover.png';
-import harvest from '/public/images/works/webs/harvest.png';
-import near from '/public/images/works/webs/near.png';
-import pmd from '/public/images/works/webs/pmd.png';
-import richart from '/public/images/works/webs/richart.png';
-import scb from '/public/images/works/webs/scb.png';
-import seminar1 from '/public/images/works/webs/seminar1.png';
-import seminar2 from '/public/images/works/webs/seminar2.png';
-import seminar3 from '/public/images/works/webs/seminar3.png';
-import seminar4 from '/public/images/works/webs/seminar4.png';
-import tnAd from '/public/images/works/webs/tn_ad.png';
-import tnMember from '/public/images/works/webs/tn_member.jpg';
+import cbdc from '../../public/images/works/webs/cbdc.png';
+import ecover from '../../public/images/works/webs/ecover.png';
+import harvest from '../../public/images/works/webs/harvest.png';
+import near from '../../public/images/works/webs/near.png';
+import pmd from '../../public/images/works/webs/pmd.png';
+import richart from '../../public/images/works/webs/richart.png';
+import scb from '../../public/images/works/webs/scb.png';
+import seminar1 from '../../public/images/works/webs/seminar1.png';
+import seminar2 from '../../public/images/works/webs/seminar2.png';
+import seminar3 from '../../public/images/works/webs/seminar3.png';
+import seminar4 from '../../public/images/works/webs/seminar4.png';
+import tnAd from '../../public/images/works/webs/tn_ad.png';
+import tnMember from '../../public/images/works/webs/tn_member.jpg';
 
 const WEB_LIST = [
   {

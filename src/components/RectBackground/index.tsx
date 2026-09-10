@@ -1,4 +1,4 @@
-import theme from '@/tailwind-theme';
+import theme from '@/theme-colors';
 import clsx from 'clsx';
 
 interface IProps {
@@ -7,7 +7,7 @@ interface IProps {
 
 export const RectBackground = ({ className }: IProps) => {
   return (
-    <div className={clsx('rect-bg absolute', className)}>
+    <div className={clsx('rect-bg', className)}>
       <svg
         xmlns='http://www.w3.org/2000/svg'
         viewBox='0 0 1920 1080'

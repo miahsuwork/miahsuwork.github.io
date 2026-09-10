@@ -2,15 +2,13 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 export default function SlideContact() {
-  const fixedCenterClass =
-    'flex flex-col fixed items-center top-1/2 -translate-y-1/2 mx-5 z-30';
   return (
     <>
-      <div className={clsx(fixedCenterClass, 'left-0 hidden')}>
-        <div className='[writing-mode:vertical-lr]'>Contact</div>
-        <div className='h-[120px] my-3 border-l border-black rounded'></div>
+      <div className={clsx('slide-contact', 'slide-contact--left')}>
+        <div className='slide-contact__label'>Contact</div>
+        <div className='slide-contact__divider'></div>
         <Image
-          className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
+          className='slide-contact__icon'
           src='/images/icon-mail.png'
           width={39}
           height={39}
@@ -18,13 +16,13 @@ export default function SlideContact() {
           priority
         />
       </div>
-      <div className={clsx(fixedCenterClass, 'right-0 hidden')}>
-        <div className='[writing-mode:vertical-lr]'>SNS</div>
-        <div className='h-[120px] my-3 border-l border-black rounded'></div>
-        <div className='flex flex-col space-y-4'>
+      <div className={clsx('slide-contact', 'slide-contact--right')}>
+        <div className='slide-contact__label'>SNS</div>
+        <div className='slide-contact__divider'></div>
+        <div className='slide-contact__icons'>
           <button>
             <Image
-              className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
+              className='slide-contact__icon'
               src='/images/icon-mail.png'
               width={39}
               height={39}
@@ -34,7 +32,7 @@ export default function SlideContact() {
           </button>
           <button>
             <Image
-              className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
+              className='slide-contact__icon'
               src='/images/icon-mail.png'
               width={39}
               height={39}
@@ -44,7 +42,7 @@ export default function SlideContact() {
           </button>
           <button>
             <Image
-              className='relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert'
+              className='slide-contact__icon'
               src='/images/icon-mail.png'
               width={39}
               height={39}
@@ -54,7 +52,7 @@ export default function SlideContact() {
           </button>
         </div>
       </div>
-      <div className='fixed m-5 right-0 bottom-0 hidden'>
+      <div className='slide-contact__go-top'>
         <button>goTop</button>
       </div>
     </>

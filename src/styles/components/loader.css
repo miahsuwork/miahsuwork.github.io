@@ -8,6 +8,10 @@
   overflow: hidden;
   background: #d8f3f9;
 }
+
+.loader--hidden {
+  display: none;
+}
 .preload-inner {
   display: flex;
   align-items: center;
@@ -177,6 +181,7 @@
   width: 15px;
   height: 15px;
   background-color: #ffffff;
+  border-radius: 2px;
   animation: sk-cubemove 2s infinite ease-in-out;
 }
 

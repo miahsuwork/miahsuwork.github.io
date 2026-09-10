@@ -5,14 +5,18 @@ import { useGSAP } from '@gsap/react';
 import clsx from 'clsx';
 import gsap from 'gsap';
 import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import 'swiper/css/effect-cards';
 import { EffectCards } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 const WebProject = () => {
   const listRef = useRef<HTMLDivElement>(null);
-  const [webs, setWebs] = useState(WEB_LIST);
+  const [webs] = useState(() =>
+    WEB_LIST.sort(
+      (a, b) => new Date(b.endTime).getTime() - new Date(a.endTime).getTime()
+    )
+  );
 
   useGSAP(
     (context, contextSafe) => {
@@ -51,26 +55,16 @@ const WebProject = () => {
     { scope: listRef }
   );
 
-  useEffect(() => {
-    setWebs(
-      WEB_LIST.sort((a, b) => {
-        return new Date(b.endTime).getTime() - new Date(a.endTime).getTime();
-      })
-    );
-  }, []);
   return (
     <div className='layout' ref={listRef}>
-      <div className='md:mt-[6vw] flex flex-wrap justify-between'>
+      <div className='web-list'>
         {webs.map((item, index) => (
           <div
-            className={clsx(
-              'pt-[60px] md:pt-[100px] web-item md:w-[45%]',
-              index % 2 === 0 && 'md:translate-y-[-12vw]'
-            )}
+            className={clsx('web-item', index % 2 === 0 && 'web-item--offset')}
             key={index}
           >
-            <div className='opacity-0 web-item__inner translate-y-8'>
-              <div className='worked-img overflow-hidden rounded-lg cursor-pointer'>
+            <div className='web-item__inner'>
+              <div className='worked-img'>
                 {item.url ? (
                   <a href={item.url} target='_blank'>
                     <div>
@@ -81,21 +75,18 @@ const WebProject = () => {
                   <Image src={item.src} alt={item.title} />
                 )}
               </div>
-              <div className='mt-8'>
-                <div className='flex justify-between flex-wrap'>
+              <div className='web-item__meta'>
+                <div className='web-item__meta-row'>
                   <div>{item.title}</div>
                   <div>
                     {formatDate(item.startTime)} - {formatDate(item.endTime)}
                   </div>
                 </div>
-                <div className='flex flex-wrap mt-3'>
+                <div className='web-item__tags'>
                   {item.tags.map((tag, index) => {
                     return (
                       <div
-                        className={clsx(
-                          'border border-gray-500 py-1 px-2 mx-1 text-xs rounded-xl',
-                          index === 0 && 'ml-0'
-                        )}
+                        className={clsx('tag', index === 0 && 'tag--first')}
                         key={tag}
                       >
                         {tag}
@@ -108,18 +99,15 @@ const WebProject = () => {
           </div>
         ))}
       </div>
-      <div className='lg:flex lg:flex-wrap mb-[100px] mt-[100px] lg:mt-0'>
-        <div className='mb-6 lg:px-6'>
-          <div className='mb-3'>Seminar/ Webinar</div>
-          <div className='flex flex-wrap'>
+      <div className='seminar-section'>
+        <div className='seminar-section__aside'>
+          <div className='seminar-section__aside-title'>Seminar/ Webinar</div>
+          <div className='seminar-section__tags'>
             {['HTML', 'CSS', 'Bootstrap', 'JavaScript', 'jQuery'].map(
               (tag, index) => {
                 return (
                   <span
-                    className={clsx(
-                      'border border-gray-500 py-1 px-2 m-1 text-xs rounded-xl',
-                      index === 0 && 'ml-0'
-                    )}
+                    className={clsx('tag', index === 0 && 'tag--first')}
                     key={tag}
                   >
                     {tag}
@@ -128,11 +116,11 @@ const WebProject = () => {
               }
             )}
           </div>
-          <div className='mt-3'>
+          <div className='seminar-section__desc'>
             單頁式活動型網站，在有限的時間內完成不同型式與特色的網站。
           </div>
         </div>
-        <div className='flex-1 flex justify-center px-6'>
+        <div className='seminar-section__slider'>
           <Swiper
             effect={'cards'}
             grabCursor
@@ -143,7 +131,7 @@ const WebProject = () => {
             {SEMINAR_LIST.map((item, index) => (
               <SwiperSlide className='seminar__item' key={index}>
                 <a href={item.url} target='_blank'>
-                  <div className='flex h-full overflow-hidden'>
+                  <div className='seminar__link'>
                     <Image src={item.src} alt='seminar' />
                   </div>
                 </a>

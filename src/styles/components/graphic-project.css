@@ -1,0 +1,51 @@
+.graphic-grid {
+  columns: 1;
+  gap: 20px;
+}
+@media (min-width: 768px) {
+  .graphic-grid {
+    columns: 2;
+  }
+}
+@media (min-width: 1024px) {
+  .graphic-grid {
+    columns: 3;
+  }
+}
+.graphic-grid > .masonry-img:not(:first-child) {
+  margin-top: 32px;
+}
+
+.masonry-img {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 16px;
+  border: 1px solid var(--color-gray-500);
+  opacity: 0;
+}
+
+.graphic-grid__item-info {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 8px 16px;
+}
+
+.graphic-grid__item-body {
+  padding-top: 40px;
+}
+
+.graphic-grid__item-link {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.graphic-grid__item-img {
+  transition: transform 500ms cubic-bezier(0, 0, 0.2, 1);
+}
+.graphic-grid__item-img:hover {
+  transform: scale(1.1);
+}

@@ -32,16 +32,20 @@ export const Loader = ({ hide }: IProps) => {
       });
     });
 
-    hide ? hideLoader() : showLoader();
+    if (hide) {
+      hideLoader();
+    } else {
+      showLoader();
+    }
   }, [contextSafe, hide]);
 
   return (
     <div ref={loaderRef}>
-      <div className={`loader ${isHide ? 'hidden' : ''}`}>
+      <div className={`loader ${isHide ? 'loader--hidden' : ''}`}>
         <div className='preload-inner'>
           <div className='spinner spinner04'>
-            <div className='cube1 rounded-sm'></div>
-            <div className='cube2 rounded-sm'></div>
+            <div className='cube1'></div>
+            <div className='cube2'></div>
           </div>
         </div>
       </div>

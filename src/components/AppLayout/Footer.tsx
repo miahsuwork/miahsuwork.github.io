@@ -5,8 +5,8 @@ export default function Footer() {
 
   return (
     <footer>
-      <div className='layout flex lg:justify-start justify-center'>
-        <div className='text-xs py-5'>
+      <div className='layout footer__inner'>
+        <div className='footer__copyright'>
           COPYRIGHT © {thisYear} MiaHsu All Rights Reserved.
         </div>
       </div>

@@ -55,7 +55,7 @@ export default function Works() {
   }, [list]);
 
   return (
-    <div className='relative' ref={workRef}>
+    <div className='works-page' ref={workRef}>
       <div className='layout'>
         <PageTitle title='Works' />
         <div>
@@ -66,11 +66,11 @@ export default function Works() {
             }}
           />
         </div>
-        <div className='flex flex-wrap lg:justify-end lg:absolute lg:right-0 w-full'>
+        <div className='works-page__header-row'>
           <div className='works__header'>
             <div>
               <div className='works__decorate'>
-                <div className='works__decorate-line my-[15px] w-full h-[1px]'></div>
+                <div className='works__decorate-line'></div>
               </div>
             </div>
             <div className='works__desc'>

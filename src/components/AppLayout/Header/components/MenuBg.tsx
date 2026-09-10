@@ -3,7 +3,7 @@ import React from 'react';
 
 export default function MenuBg() {
   return (
-    <div className='w-full h-full absolute'>
+    <div className='navbar__bg'>
       <div className='navbar__bg-top main-bg-color'></div>
       <svg
         width='100%'
@@ -24,7 +24,7 @@ export default function MenuBg() {
           strokeWidth='0'
           fill='url(#gradient)'
           fillOpacity='1'
-          className='transition-all duration-300 ease-in-out delay-150 path-0'
+          className='path-0'
           transform='rotate(-180 720 250)'
         ></path>
       </svg>

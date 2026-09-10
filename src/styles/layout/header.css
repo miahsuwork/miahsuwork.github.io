@@ -164,6 +164,10 @@
 }
 
 .path-0 {
+  transition-delay: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+  transition-property: all;
   animation: pathAnim-0 4s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;

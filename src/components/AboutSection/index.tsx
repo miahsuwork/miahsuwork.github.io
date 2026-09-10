@@ -12,7 +12,7 @@ const AboutSection = (props: PropsWithChildren<IProps>) => {
   return (
     <div
       className={clsx(
-        'pt-10 lg:pt-[140px] section',
+        'about-section section',
         props.className && props.className
       )}
     >

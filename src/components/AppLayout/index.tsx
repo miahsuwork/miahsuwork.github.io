@@ -17,10 +17,10 @@ export default function AppLayout({ children }: PropsWithChildren) {
   }, []);
 
   return (
-    <div className='flex flex-col min-h-screen'>
+    <div className='app-layout'>
       <Loader hide={isInitSuccess} />
       <Header />
-      <main className='flex-1'>{children}</main>
+      <main className='app-layout__main'>{children}</main>
       <Footer />
       <SlideContact />
     </div>

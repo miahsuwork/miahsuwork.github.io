@@ -1,0 +1,25 @@
+.app-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-layout__main {
+  flex: 1 1 0%;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: center;
+}
+@media (min-width: 1024px) {
+  .footer__inner {
+    justify-content: flex-start;
+  }
+}
+
+.footer__copyright {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: var(--text-xs);
+}

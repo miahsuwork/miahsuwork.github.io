@@ -7,5 +7,10 @@
 @import 'layout/header.css';
 @import 'components/tab.css';
 @import 'components/loader.css';
+@import 'components/graphic-project.css';
+@import 'components/web-project.css';
+@import 'components/app-layout.css';
+@import 'components/slide-contact.css';
 @import 'pages/landing.css';
 @import 'pages/works.css';
+@import 'pages/about.css';

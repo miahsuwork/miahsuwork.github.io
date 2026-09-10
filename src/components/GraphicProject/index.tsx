@@ -30,22 +30,19 @@ const GraphicProject = () => {
 
   return (
     <div className='layout' ref={listRef}>
-      <div className='columns-1 gap-5 md:columns-2 lg:columns-3 [&>.masonry-img:not(:first-child)]:mt-8'>
+      <div className='graphic-grid'>
         {graphics.map((item, index) => (
-          <div
-            className='masonry-img opacity-0 flex justify-center flex-wrap border border-gray-500 p-4 relative'
-            key={index}
-          >
-            <div className='w-full py-2 px-4 flex justify-between absolute'>
+          <div className='masonry-img' key={index}>
+            <div className='graphic-grid__item-info'>
               <div>{item.title}</div>
               <div>{formatDate(item.date)}</div>
             </div>
-            <div className='pt-10'>
+            <div className='graphic-grid__item-body'>
               {item.url ? (
                 <a href={item.url} target='_blank'>
-                  <div className='overflow-hidden cursor-pointer'>
+                  <div className='graphic-grid__item-link'>
                     <Image
-                      className='transition duration-500 ease-out hover:scale-110'
+                      className='graphic-grid__item-img'
                       src={item.src}
                       alt={item.title}
                     />
